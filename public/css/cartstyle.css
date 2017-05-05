@@ -45,7 +45,7 @@ body, button, input, select, textarea {
 /*图片*/
 .td-item .item-info {margin: -3px 0px 0px 91px;}
 .item-content .item-pic a {text-align: center;}
-.item-content .item-pic {width: 80px; height: 80px; border: 1px solid #EEE; float: left;overflow: hidden;margin-top:20px;margin-left:3px;}	
+.item-content .item-pic {width: 80px; height: 80px; border: 1px solid #EEE; float: left;overflow: hidden;margin-top:20px;margin-left:3px;}
 .td-item .item-basic-info { height: 40px; margin-top:20px; text-align:left}
 /*规格*/
 .td.td-info{position: absolute;left:0px;top:55px;width:100%;overflow: hidden;padding-left: 120px;line-height: 16px;}
@@ -87,70 +87,59 @@ body, button, input, select, textarea {
 .submit-btn {line-height:48px;font-family: "Lantinghei SC","Microsoft Yahei";font-size:16px;color: #fff;}
 
 
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 
-   {
+{
 
-.concent{margin-top:0;}
-.wp{overflow: hidden;border: #f5f5f5 2px solid;}
-#cartTable {background: #fff;}
-.bundle.bundle-last{border: #f5f5f5 1px solid;}
-.cart-table-th, .td-sum{display: block;}
-.th.th-op,.list-change{display: none;}
+    .concent{margin-top:0;}
+    .wp{overflow: hidden;border: #f5f5f5 2px solid;}
+    #cartTable {background: #fff;}
+    .bundle.bundle-last{border: #f5f5f5 1px solid;}
+    .cart-table-th, .td-sum{display: block;}
+    .th.th-op,.list-change{display: none;}
 
-.item-content{overflow: visible;height:115px ;}
-.bundle-hd{border-bottom: #CCC 1px dotted;padding:5px 0px;height:auto;overflow: hidden;background:#eee;} 
-.bundle-hd .bd-promos {	margin-left: 35px;}
-.td.td-amount .sl{width:auto;margin-right:0 ;} 
-.td.td-amount .sl .min,.td.td-amount .sl .add{display:inline-block;}
-.td.td-amount .sl input.text_box{border:1px solid #ddd;}
-/*布局 */
-.cart-table-th .th-item .td-inner {padding-left:0px;}  	
-.th.th-item,.td.td-item,.td.td-info{width:50%;}
-.th.th-item{margin-right:-40px;}
-/*价格*/
-.th.th-price,.td.td-price,.th.th-amount,.td.td-amount{position:static;width:15%;text-align: center;}
-.td.td-price,.td.td-amount,.td.td-sum,.td.td-oplist{margin-top: 20px;}
-.item-content .price-original {position:static; font-size: 12px;}
-.price-content {padding-top: 0;}
-/*操作*/
-.th.th-sum,.td.td-sum{width:20%;text-align: center;}
-.td-op a {position: absolute;top: -25px;left:80%;width:20%;text-align: center;}
-/*结算功能*/
-.float-bar-wrapper,.float-bar-right{position: static;border: #f5f5f5 1px solid;background:#eee ;}
-.J_BatchFav,.amount-sum,.price-sum{display: block;margin-right:10px ;}	
-.float-bar-wrapper{margin-top:10px ;}
-.footer{margin-top: 40px;}
-   }
+    .item-content{overflow: visible;height:115px ;}
+    .bundle-hd{border-bottom: #CCC 1px dotted;padding:5px 0px;height:auto;overflow: hidden;background:#eee;}
+    .bundle-hd .bd-promos {	margin-left: 35px;}
+    .td.td-amount .sl{width:auto;margin-right:0 ;}
+    .td.td-amount .sl .min,.td.td-amount .sl .add{display:inline-block;}
+    .td.td-amount .sl input.text_box{border:1px solid #ddd;}
+    /*布局 */
+    .cart-table-th .th-item .td-inner {padding-left:0px;}
+    .th.th-item,.td.td-item,.td.td-info{width:50%;}
+    .th.th-item{margin-right:-40px;}
+    /*价格*/
+    .th.th-price,.td.td-price,.th.th-amount,.td.td-amount{position:static;width:15%;text-align: center;}
+    .td.td-price,.td.td-amount,.td.td-sum,.td.td-oplist{margin-top: 20px;}
+    .item-content .price-original {position:static; font-size: 12px;}
+    .price-content {padding-top: 0;}
+    /*操作*/
+    .th.th-sum,.td.td-sum{width:20%;text-align: center;}
+    .td-op a {position: absolute;top: -25px;left:80%;width:20%;text-align: center;}
+    /*结算功能*/
+    .float-bar-wrapper,.float-bar-right{position: static;border: #f5f5f5 1px solid;background:#eee ;}
+    .J_BatchFav,.amount-sum,.price-sum{display: block;margin-right:10px ;}
+    .float-bar-wrapper{margin-top:10px ;}
+    .footer{margin-top: 40px;}
+}
 
-@media only screen and (min-width:1025px) 
+@media only screen and (min-width:1025px)
 
-   {
-.item-content {overflow: hidden;} 
-.td.td-item {width: 30%;}
-.td.td-info{width:20%;position: static;padding-left: 0;}  
-.td.td-info .item-props{position: static;text-align:center;padding-top:17px;margin-top:0 ;} 
-.item-props.item-props-can{height:100px;border: 1px dashed transparent;}	
- /*价格*/
-.th.th-price,.td.td-price,.th.th-sum,.td.td-sum{width:10%;text-align: center;}  	
-/*操作*/
-.th.th-amount,.td.td-amount,.th.th-op,.td.td-op{display:block;width:15%;text-align: center;}   
-.td-op{margin-top: 20px;}	
-.td-op a {position: static;width: 100%;} 
-.td-op .btn-fav{display: block;} 
-.item-content .td .item-props-can{position: relative;}
-.item-content .td .item-props-can:hover,.item-content .td .item-props-can.selected{border-color:#F60;background: #FFF none repeat scroll 0% 0%;}
-.item-props.item-props-can:hover .btn-edit-sku ,.item-props.item-props-can .btn-edit-sku.selected {display: block;position: absolute;right: -1px;top:-1px;color: #FFF;cursor: pointer;background: #F60 none repeat scroll 0% 0%;padding: 2px 4px 0px;width: auto;height: 16px;line-height: 1;}	 	
-   	
-   }
+{
+    .item-content {overflow: hidden;}
+    .td.td-item {width: 30%;}
+    .td.td-info{width:20%;position: static;padding-left: 0;}
+    .td.td-info .item-props{position: static;text-align:center;padding-top:17px;margin-top:0 ;}
+    .item-props.item-props-can{height:100px;border: 1px dashed transparent;}
+    /*价格*/
+    .th.th-price,.td.td-price,.th.th-sum,.td.td-sum{width:10%;text-align: center;}
+    /*操作*/
+    .th.th-amount,.td.td-amount,.th.th-op,.td.td-op{display:block;width:15%;text-align: center;}
+    .td-op{margin-top: 20px;}
+    .td-op a {position: static;width: 100%;}
+    .td-op .btn-fav{display: block;}
+    .item-content .td .item-props-can{position: relative;}
+    .item-content .td .item-props-can:hover,.item-content .td .item-props-can.selected{border-color:#F60;background: #FFF none repeat scroll 0% 0%;}
+    .item-props.item-props-can:hover .btn-edit-sku ,.item-props.item-props-can .btn-edit-sku.selected {display: block;position: absolute;right: -1px;top:-1px;color: #FFF;cursor: pointer;background: #F60 none repeat scroll 0% 0%;padding: 2px 4px 0px;width: auto;height: 16px;line-height: 1;}
 
-
-
-
-
-
-
-
-
-
-
+}

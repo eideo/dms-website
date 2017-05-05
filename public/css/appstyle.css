@@ -26,19 +26,19 @@ img{width:100% ;}
 
 @media only screen and (min-width: 640px){
 
-/*多个商品评价*/
-.comment-list{position: relative;margin:0px 5px ;padding-bottom:10px ;}
-.item-pic{width: 150px;height: auto;float: none;}
-.item-title{width:150px ;overflow: hidden;}
-.item-pay-logis{display: none;}
-.item-name p,.comment-list .info-little span{height: 18px;line-height: 18px;overflow: hidden;}
-.item-opinion{position: absolute;left:200px;top: 0px;right:0px;width: auto;max-width:600px ;}
-.item-comment{position: absolute;left:200px;top: 40px;right:0px;max-width:600px ;}
-textarea{min-height:120px ;border: 1px solid #F5F8FA;;padding:10px ;margin: 0px 0px;}
-.filePic{position: absolute;left:200px;bottom: 10px;width:120px;}
-.filePic span{display: block;cursor: pointer;}
-.filePic img{display: none;}
-.user-comment{max-width:1000px;margin:0px auto;}
+    /*多个商品评价*/
+    .comment-list{position: relative;margin:0px 5px ;padding-bottom:10px ;}
+    .item-pic{width: 150px;height: auto;float: none;}
+    .item-title{width:150px ;overflow: hidden;}
+    .item-pay-logis{display: none;}
+    .item-name p,.comment-list .info-little span{height: 18px;line-height: 18px;overflow: hidden;}
+    .item-opinion{position: absolute;left:200px;top: 0px;right:0px;width: auto;max-width:600px ;}
+    .item-comment{position: absolute;left:200px;top: 40px;right:0px;max-width:600px ;}
+    textarea{min-height:120px ;border: 1px solid #F5F8FA;;padding:10px ;margin: 0px 0px;}
+    .filePic{position: absolute;left:200px;bottom: 10px;width:120px;}
+    .filePic span{display: block;cursor: pointer;}
+    .filePic img{display: none;}
+    .user-comment{max-width:1000px;margin:0px auto;}
 }
 
 

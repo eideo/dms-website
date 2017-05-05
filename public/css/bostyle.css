@@ -10,7 +10,7 @@
 .td-from .item-img{width:65px;float: left;}
 .item-info{margin-top:15px;font-size:14px ;}
 .info-little span{display:none}
-.item-info .info-little{position: absolute;left:75% ;top:30px;text-align: center;} 
+.item-info .info-little{position: absolute;left:75% ;top:30px;text-align: center;}
 .td-remainderprice{position: absolute;left:75%;top:50px;font-size: 10px;}
 .td-term{position: absolute;left:65px;bottom:20px ;font-size:10px;}
 
@@ -18,26 +18,26 @@
 .td-usestatus p{display:none;}
 .td-usestatus img{width:100%;}
 .am-tabs-d2 .am-tabs-nav li{text-align: center;}
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 {
-.td-from{border-right:none;}	
-/*布局更改*/
-.cart-table-th .th,.cart-table-th .td{width:15%;text-align: center;}
-.td.td-from,.th.th-from{border-right:none;width:55%;}	
-.order-top,.cart-table-th .th,.td-usestatus {display:block;}
-.item-term span,.td-remainderprice span,.td-usestatus span{display: none;}
-.info-little span,.td-usestatus p{display:inline-block}
+	.td-from{border-right:none;}
+	/*布局更改*/
+	.cart-table-th .th,.cart-table-th .td{width:15%;text-align: center;}
+	.td.td-from,.th.th-from{border-right:none;width:55%;}
+	.order-top,.cart-table-th .th,.td-usestatus {display:block;}
+	.item-term span,.td-remainderprice span,.td-usestatus span{display: none;}
+	.info-little span,.td-usestatus p{display:inline-block}
 
 
-.item-info,.item-info .info-little{position: static;text-align: left;}
-.td-remainderprice,.td-term,.td-usestatus {position: static;margin-top:15px ;font-size: 14px;}
-.th.th-from{text-align: left;padding-left:65px;}
+	.item-info,.item-info .info-little{position: static;text-align: left;}
+	.td-remainderprice,.td-term,.td-usestatus {position: static;margin-top:15px ;font-size: 14px;}
+	.th.th-from{text-align: left;padding-left:65px;}
 
 
-	}
-	
-@media only screen and (min-width:1025px) 
+}
+
+@media only screen and (min-width:1025px)
 {
-	
 
-	}
+
+}

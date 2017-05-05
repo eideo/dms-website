@@ -41,43 +41,43 @@
 
 
 
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 {
-.goods {width:33.33%;float: left;}
-.goods-date{padding:0px;}
-.goods-box{margin:0px 8px 10px 8px; ;}
-.goods-pic {width: 100%;position: relative;overflow: hidden;}
-.goods-date { position: relative;height: 40px;line-height: 40px;font-family: arial;font-size: 14px;color: #666;}
-.goods .goods-date .day-lite del {position: absolute;top:10px;width: 85px;line-height: 22px;background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;color: #FFF;font-size: 12px; text-align: center;text-decoration: none; cursor: pointer;}
-.goods-date span {position: relative;background: #FFF;z-index: 2;white-space: nowrap; padding-right:5px;}
-.goods-date s.line {display:inline; position: absolute;top: 23px; right: 0px;width: 100%;height: 1px;line-height: 1px; background: #CCC none repeat scroll 0% 0%;}
-.goods .good-title {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;height: 20px; }
-/*布局*/
-.goods-pic{width:100%;position: static;}
-.goods-attr{float:none;margin-left:0px ;height: auto;}
-.goods-num {position: static;text-align: center;}
-.goods-price{text-align: center;}	
+ .goods {width:33.33%;float: left;}
+ .goods-date{padding:0px;}
+ .goods-box{margin:0px 8px 10px 8px; ;}
+ .goods-pic {width: 100%;position: relative;overflow: hidden;}
+ .goods-date { position: relative;height: 40px;line-height: 40px;font-family: arial;font-size: 14px;color: #666;}
+ .goods .goods-date .day-lite del {position: absolute;top:10px;width: 85px;line-height: 22px;background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;color: #FFF;font-size: 12px; text-align: center;text-decoration: none; cursor: pointer;}
+ .goods-date span {position: relative;background: #FFF;z-index: 2;white-space: nowrap; padding-right:5px;}
+ .goods-date s.line {display:inline; position: absolute;top: 23px; right: 0px;width: 100%;height: 1px;line-height: 1px; background: #CCC none repeat scroll 0% 0%;}
+ .goods .good-title {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;height: 20px; }
+ /*布局*/
+ .goods-pic{width:100%;position: static;}
+ .goods-attr{float:none;margin-left:0px ;height: auto;}
+ .goods-num {position: static;text-align: center;}
+ .goods-price{text-align: center;}
 
-/*删除*/
-.goods .goods-date del{right: auto;}
-}	
-	
-@media only screen and (min-width:1025px) 
+ /*删除*/
+ .goods .goods-date del{right: auto;}
+}
+
+@media only screen and (min-width:1025px)
 {
-.goods {width:25%;}
-.goods-num .match-recom a {display: inline-block;width:65px;}
-/*删除*/
-.goods-pic{width:100%;position:relative;}
-.goods-box:hover .goods-delete{visibility:visible;}
-.goods-box:hover .goods-pic .goods-status {display: block;}
+ .goods {width:25%;}
+ .goods-num .match-recom a {display: inline-block;width:65px;}
+ /*删除*/
+ .goods-pic{width:100%;position:relative;}
+ .goods-box:hover .goods-delete{visibility:visible;}
+ .goods-box:hover .goods-pic .goods-status {display: block;}
 
 
 
 }
 
-@media only screen and (min-width:1200px) 
+@media only screen and (min-width:1200px)
 {
-.goods {width:20%;}
+ .goods {width:20%;}
 }
 
 

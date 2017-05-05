@@ -54,9 +54,9 @@ h3.expense.income-title.block-title{display: block; background:#fff ;padding:0px
 /*银行卡*/
 .module-card .cards-carousel .mask {position: relative;overflow: hidden;height: 100px;list-style: outside none none;margin:15px 0 0 0 ;}
 .cards-carousel .mask .bac {background-repeat: no-repeat;width: 267px;height: 89px;margin-top: 6px;
-background-position: -887px -102px;background-image: url("../images/3CoOkxrFOP.png");}
+    background-position: -887px -102px;background-image: url("../images/3CoOkxrFOP.png");}
 .cards-carousel .mask .bank{position: absolute;margin-top: 10px;padding: 5px 10px;top: 15px;left: 15px;font-size: 16px;text-indent: -9999em;
-width: 126px;height:36px;background-repeat: no-repeat;background-color: #FFF;background-position: 5px center;}
+    width: 126px;height:36px;background-repeat: no-repeat;background-color: #FFF;background-position: 5px center;}
 .module-card .cards-carousel .details {position: absolute;top: 83px;right:3% ;cursor: pointer;}
 .cards-details{display: none;}
 /*多张银行卡*/
@@ -76,22 +76,22 @@ width: 126px;height:36px;background-repeat: no-repeat;background-color: #FFF;bac
 .module-card .cards-details .bank-detail {background-color: #B9E9FA;padding: 5px 2px;font-size: 12px;overflow: hidden;}
 .module-card .cards-details .bank-detail div {width: 50%;padding: 1px 19px;}
 
-@media only screen and (min-width:1025px) 
-{	
-.trade-circle-select,.module-income .block-expense{display: block;}
-.module-income .block-income {width: 75%;}
-.emoji-span {max-width:150px;}
-.ebill-section{margin-bottom: 20px;width:98%;margin-left:1% ;}
+@media only screen and (min-width:1025px)
+{
+    .trade-circle-select,.module-income .block-expense{display: block;}
+    .module-income .block-income {width: 75%;}
+    .emoji-span {max-width:150px;}
+    .ebill-section{margin-bottom: 20px;width:98%;margin-left:1% ;}
 
-/*支出定位*/
-h3.expense.income-title.block-title {background:none;position: absolute;top:50%;margin-top: -38px;text-align: center;height: auto;left:75%;margin-left:100px ;padding:0px ;}
-h3.expense.income-title.block-title span{display: block;padding-left: 0;}
+    /*支出定位*/
+    h3.expense.income-title.block-title {background:none;position: absolute;top:50%;margin-top: -38px;text-align: center;height: auto;left:75%;margin-left:100px ;padding:0px ;}
+    h3.expense.income-title.block-title span{display: block;padding-left: 0;}
 
-.inner-module{width:50%;float: left;}
+    .inner-module{width:50%;float: left;}
 
-/*多张银行卡*/
-.card-chart{margin:30px 10px 0px 20px ;}
-.cards-details{margin-top:10px ;}
+    /*多张银行卡*/
+    .card-chart{margin:30px 10px 0px 20px ;}
+    .cards-details{margin-top:10px ;}
 }
 
 

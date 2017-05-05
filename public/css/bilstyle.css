@@ -17,18 +17,18 @@ td.operation,th.action{width:10% ;}
 thead th{display: none;}
 
 @media only screen and (min-width: 640px){
-.order-time{padding:15px 15px ;}	
-tbody tr{height:60px;}
-thead th{display:table-cell;}	
-td{padding:10px 0px;vertical-align: middle;}
-td.time{position: static;padding:10px 0px;border-bottom: 1px solid #eee;width: 15%;}	
-td.time p{display:block;}
-td.title.name,th.name{width:45%;}
-td.operation,th.action{width:15% ;}	
-	}
+	.order-time{padding:15px 15px ;}
+	tbody tr{height:60px;}
+	thead th{display:table-cell;}
+	td{padding:10px 0px;vertical-align: middle;}
+	td.time{position: static;padding:10px 0px;border-bottom: 1px solid #eee;width: 15%;}
+	td.time p{display:block;}
+	td.title.name,th.name{width:45%;}
+	td.operation,th.action{width:15% ;}
+}
 
 @media only screen and (min-width:1025px){
-td.title.name,th.name{width:40%;}
-td.operation,th.action{width:20%;}
-	
-	}
+	td.title.name,th.name{width:40%;}
+	td.operation,th.action{width:20%;}
+
+}

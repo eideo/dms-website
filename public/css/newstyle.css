@@ -14,36 +14,21 @@
 .goods-date{margin-bottom:10px ;}
 /*物流*/
 .item{width:100%;overflow: hidden;padding:10px 0px;}
-.item-pic {width: 80px;height: 80px;border: 1px solid #EEE;float: left;overflow: hidden;margin:5px;}	
+.item-pic {width: 80px;height: 80px;border: 1px solid #EEE;float: left;overflow: hidden;margin:5px;}
 .item-info{margin-left:90px;height:90px;overflow: hidden;padding:5px 0px ;font-size: 14px ;line-height:20px ;}
 
 
 .item-info .item-comment{height:60px;overflow: hidden;}
 
-	
-@media only screen and (min-width:640px) 
+
+@media only screen and (min-width:640px)
 {
-.user-news .s-msg-item {display: block;width:50%;float: left;}
-}
-	
-	
-	
-@media only screen and (min-width:1025px) 
-{
-.user-news .s-msg-item {display: block;width:33.33%;}
+    .user-news .s-msg-item {display: block;width:50%;float: left;}
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media only screen and (min-width:1025px)
+{
+    .user-news .s-msg-item {display: block;width:33.33%;}
+}

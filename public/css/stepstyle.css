@@ -3,16 +3,16 @@
 /*步骤背景*/
 .m-progress-list .step {display: inline-block;width: 80px;text-align: center;color: #999;letter-spacing: -5px;}
 .m-progress-list .stage-name {padding-top: 10px;font-size: 12px;line-height: 14px;
-letter-spacing: normal;word-spacing: normal;}
+    letter-spacing: normal;word-spacing: normal;}
 .u-progress-stage-bg {position: relative;display: inline-block;background-image: url(../images/sprite.png);
-background-position: -45px -135px;width: 29px;height: 29px;}
+    background-position: -45px -135px;width: 29px;height: 29px;}
 /*变换的背景*/
 .u-stage-icon-inner .bg {position: absolute;left: 0px;top: 0px;}
 .step-1 .u-stage-icon-inner .bg {background-image: url(../images/sprite.png);background-position: -79px -135px;width: 19px;height: 19px;}
 .step-2 .u-stage-icon-inner .bg {opacity:0;background-image: url(../images/sprite.png);background-position: -103px -135px;width: 19px;height: 19px;}
 
 .u-stage-icon-inner {position: relative;z-index: 20;display: inline-block;width: 19px;height: 19px;line-height: 19px;
-vertical-align: top;margin-top: 5px;margin-left: -24px;color: #b5b5b5;font-size: 12px;letter-spacing: normal;word-spacing: normal;}
+    vertical-align: top;margin-top: 5px;margin-left: -24px;color: #b5b5b5;font-size: 12px;letter-spacing: normal;word-spacing: normal;}
 .u-progress-placeholder {display: inline-block;width: 100%;height: 0;font-size: 0;line-height: 0;overflow: hidden;}
 
 
@@ -39,7 +39,7 @@ vertical-align: top;margin-top: 5px;margin-left: -24px;color: #b5b5b5;font-size:
 .authenticationInfo .am-form-content{border-bottom: 1px solid #eee;}
 
 .authenticationPic .title{text-align: center;}
-.authenticationPic p.tip{line-height:28px ;} 
+.authenticationPic p.tip{line-height:28px ;}
 .cardlist {overflow: hidden;padding:0px 10px 20px;}
 .cardlist li{float: left;width:50% ;}
 .cardlist li .cardExample,.cardlist li .cardPic p.titleText{display: none;}
@@ -51,33 +51,33 @@ vertical-align: top;margin-top: 5px;margin-left: -24px;color: #b5b5b5;font-size:
 .authentication .info-btn{width:100% ;padding:0px 10px ;}
 .authentication .info-btn .am-btn{display: block;}
 @media only screen and (min-width: 640px){
-.am-form-label { width:70px; }
-.am-form{width:70%;}
+    .am-form-label { width:70px; }
+    .am-form{width:70%;}
 
-/*实名认证*/
-.authenticationInfo .title, .authenticationPic .title{background: none; border-top: none;text-align: left;}
-.authenticationInfo .am-form-group {padding-left:30px;height: 60px;line-height: 60px;}
-.authenticationInfo .am-form-group .am-form-label{text-align: left;}
-.authenticationInfo .am-form-content{border: none;}
-.authenticationInfo .am-form-group input {height:36px;line-height:36px;border: 1px solid #eee !important;width: 200px;outline: none;padding:0px 5px ;}
-/*示例*/
-.cardlist{padding:10px 0px 20px;}
-.cardlist li{float:none;width:100% ;overflow: hidden;}
-.cardlist li .cardPic,.cardlist li .cardExample{width: 210px;float: left;margin:30px 0px 10px 30px;display: block;position: relative;}	
-.cardlist li .cardPic  p.titleText,.cardlist li .cardExample  p.titleText{position: absolute;display: block;top:-25px;}
-.authenticationPic p.tip{display: none;}
-.authentication .info-btn{width:160px ;margin-left:30px ;padding: 0px;}
+    /*实名认证*/
+    .authenticationInfo .title, .authenticationPic .title{background: none; border-top: none;text-align: left;}
+    .authenticationInfo .am-form-group {padding-left:30px;height: 60px;line-height: 60px;}
+    .authenticationInfo .am-form-group .am-form-label{text-align: left;}
+    .authenticationInfo .am-form-content{border: none;}
+    .authenticationInfo .am-form-group input {height:36px;line-height:36px;border: 1px solid #eee !important;width: 200px;outline: none;padding:0px 5px ;}
+    /*示例*/
+    .cardlist{padding:10px 0px 20px;}
+    .cardlist li{float:none;width:100% ;overflow: hidden;}
+    .cardlist li .cardPic,.cardlist li .cardExample{width: 210px;float: left;margin:30px 0px 10px 30px;display: block;position: relative;}
+    .cardlist li .cardPic  p.titleText,.cardlist li .cardExample  p.titleText{position: absolute;display: block;top:-25px;}
+    .authenticationPic p.tip{display: none;}
+    .authentication .info-btn{width:160px ;margin-left:30px ;padding: 0px;}
 
 
 }
 
 @media only screen and (min-width:1024px){
-.cardlist{margin-left:20px ;}	
-.cardlist li .cardPic{margin-left:90px;}
-.cardlist li .cardPic  p.titleText{left: -80px;top:0px;text-align: right;width: 70px;}
-.cardlist li .cardExample {margin-left:50px;}
-.cardlist li .cardExample  p.titleText{left: -40px;top:0px;text-align: right;width:30px;}
-.authentication .info-btn{width:160px ;margin-left:110px ;}
+    .cardlist{margin-left:20px ;}
+    .cardlist li .cardPic{margin-left:90px;}
+    .cardlist li .cardPic  p.titleText{left: -80px;top:0px;text-align: right;width: 70px;}
+    .cardlist li .cardExample {margin-left:50px;}
+    .cardlist li .cardExample  p.titleText{left: -40px;top:0px;text-align: right;width:30px;}
+    .authentication .info-btn{width:160px ;margin-left:110px ;}
 
 }
 

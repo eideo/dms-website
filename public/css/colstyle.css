@@ -13,7 +13,7 @@
 .s-item .s-pic .s-pic-link { margin:0px auto;overflow: hidden;text-align: center;}
 .s-item .s-pic .s-pic-link img{ width:100%;}
 .s-item .s-pic .tip-title{position: absolute;top:50%;left:50%;width:50px;height: 50px;margin-left:-25px;margin-top: -25px;border-radius:50% ;background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
-color:#fff ;text-align: center;vertical-align: middle;padding-top:15px;}
+    color:#fff ;text-align: center;vertical-align: middle;padding-top:15px;}
 
 
 /*商品信息*/
@@ -39,33 +39,33 @@ color:#fff ;text-align: center;vertical-align: middle;padding-top:15px;}
 
 
 
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 {
-.s-item-wrap{width:33.33%; float:left;}
-.s-item .s-pic {width: 100%;position:relative;}	
+    .s-item-wrap{width:33.33%; float:left;}
+    .s-item .s-pic {width: 100%;position:relative;}
 
-.s-item .s-info {float: none; margin-left:0;padding-bottom:10px ;}	
-.s-item .s-price-box {position: static;}	
-.s-item .s-title {height:20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
-.s-price-box,.s-extra-box{text-align: center;}	
-.s-info .s-title{font-size:14px ;}
-.s-history-price{display: inline;}	
-/*操作*/
-.s-tp {position: absolute;right:0px;bottom:90px;width:100% ;left:0px ;}
-.ui-btn-loading-before {cursor: pointer;width:50%;border: none;text-align: center;background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
-color: #FFF;}
-.ui-btn-loading-before.buy{display:inline-block;position: absolute;right:-1px;}
-.s-tp i{display: none;}
-	
-}	
-@media only screen and (min-width:1025px) 
+    .s-item .s-info {float: none; margin-left:0;padding-bottom:10px ;}
+    .s-item .s-price-box {position: static;}
+    .s-item .s-title {height:20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+    .s-price-box,.s-extra-box{text-align: center;}
+    .s-info .s-title{font-size:14px ;}
+    .s-history-price{display: inline;}
+    /*操作*/
+    .s-tp {position: absolute;right:0px;bottom:90px;width:100% ;left:0px ;}
+    .ui-btn-loading-before {cursor: pointer;width:50%;border: none;text-align: center;background: rgba(0, 0, 0, 0.5) none repeat scroll 0% 0%;
+        color: #FFF;}
+    .ui-btn-loading-before.buy{display:inline-block;position: absolute;right:-1px;}
+    .s-tp i{display: none;}
+
+}
+@media only screen and (min-width:1025px)
 {
-.s-item-wrap{width:25%; float:left;}
+    .s-item-wrap{width:25%; float:left;}
 }
 
-@media only screen and (min-width:1200px) 
+@media only screen and (min-width:1200px)
 {
-.s-item-wrap{width:20%; float:left;}
+    .s-item-wrap{width:20%; float:left;}
 }
 
 

@@ -10,13 +10,13 @@
 .status-list li.first{border:none ;}
 
 
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 {
-.status-list {margin: -9px 0px 0px 12px;font-size: 12px;}
-.week{visibility:visible;}
-.hidden {visibility: hidden;}
-.time-list{display: inline;}
-.status-list li{border: none;position: relative;font-size:14px ;}
-.status-list li p.text{position: absolute;left:180px;font-size:14px ;}
+    .status-list {margin: -9px 0px 0px 12px;font-size: 12px;}
+    .week{visibility:visible;}
+    .hidden {visibility: hidden;}
+    .time-list{display: inline;}
+    .status-list li{border: none;position: relative;font-size:14px ;}
+    .status-list li p.text{position: absolute;left:180px;font-size:14px ;}
 
 }

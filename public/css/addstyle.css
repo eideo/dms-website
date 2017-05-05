@@ -30,39 +30,39 @@ a.new-abtn-type{display: block;padding: 8px; overflow:hidden; border-radius: 2px
 .address li{font-size:12px ;}
 .am-close{width:auto ;line-height:1.2;opacity: .8;text-shadow:none;color:#fff !important ;}
 .footer{display: none;}
-@media only screen and (min-width:640px) 
-{		
-.new-tit {border:none;}
-a.new-abtn-type{display: none;}
-.user-address li{width:100%;}
+@media only screen and (min-width:640px)
+{
+    .new-tit {border:none;}
+    a.new-abtn-type{display: none;}
+    .user-address li{width:100%;}
 
-.new-txt-rd2{background: url(../images/addicon2.png) 1px 10px no-repeat;padding-left:15px;padding-top: 8px;}
-.am-form-content {margin-left: 105px;}
-.new-option-r {position: absolute; top: 7px;right:10px;bottom: auto;}
-.footer{display:block;}
+    .new-txt-rd2{background: url(../images/addicon2.png) 1px 10px no-repeat;padding-left:15px;padding-top: 8px;}
+    .am-form-content {margin-left: 105px;}
+    .new-option-r {position: absolute; top: 7px;right:10px;bottom: auto;}
+    .footer{display:block;}
 
-/*地址增加*/
+    /*地址增加*/
 
 }
 
-@media only screen and (min-width:1025px) 
+@media only screen and (min-width:1025px)
 {
 
-.new-mu_l2cw {height:55px;}
-.new-addr-btn{padding-right:12px;padding-bottom:10px ;}
-.new-tit {padding:8px 12px 0px 0px;}
-.user-address li.user-addresslist{overflow:hidden;border:none;display:block;width:255px;height:150px;float: left;background: url(../images/peraddbg.png)no-repeat scroll 0% 0%;margin-right:10px ;}
-.user-address li.user-addresslist.defaultAddr{background: url(../images/peraddressbg.png)no-repeat scroll 0% 0%;}
-.user-address li{width:255px; margin-right:20px;}
+    .new-mu_l2cw {height:55px;}
+    .new-addr-btn{padding-right:12px;padding-bottom:10px ;}
+    .new-tit {padding:8px 12px 0px 0px;}
+    .user-address li.user-addresslist{overflow:hidden;border:none;display:block;width:255px;height:150px;float: left;background: url(../images/peraddbg.png)no-repeat scroll 0% 0%;margin-right:10px ;}
+    .user-address li.user-addresslist.defaultAddr{background: url(../images/peraddressbg.png)no-repeat scroll 0% 0%;}
+    .user-address li{width:255px; margin-right:20px;}
 
-.new-option-r {position: absolute;top: 0px;right:3px;padding:0px 5px;border-radius: 0 0 5px 5px;color:#fff;}
-.new-option-r i{display: none;}
-/*一些操作*/
-.user-addresslist .new-option-r {position: absolute;top: -18px;background: #f974ba;}
-.user-addresslist.defaultAddr .new-option-r {top: 0px;background: #ee3495}
-.user-addresslist .new-addr-btn{display: none;}
-.user-addresslist.defaultAddr .new-addr-btn,.user-addresslist:hover .new-addr-btn,.user-addresslist.active .new-addr-btn{display: block;}
-.user-addresslist:hover .new-option-r,.user-addresslist.active .new-option-r  {position: absolute;top: 0px;}
+    .new-option-r {position: absolute;top: 0px;right:3px;padding:0px 5px;border-radius: 0 0 5px 5px;color:#fff;}
+    .new-option-r i{display: none;}
+    /*一些操作*/
+    .user-addresslist .new-option-r {position: absolute;top: -18px;background: #f974ba;}
+    .user-addresslist.defaultAddr .new-option-r {top: 0px;background: #ee3495}
+    .user-addresslist .new-addr-btn{display: none;}
+    .user-addresslist.defaultAddr .new-addr-btn,.user-addresslist:hover .new-addr-btn,.user-addresslist.active .new-addr-btn{display: block;}
+    .user-addresslist:hover .new-option-r,.user-addresslist.active .new-option-r  {position: absolute;top: 0px;}
 
 }
 
