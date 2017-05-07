@@ -241,7 +241,7 @@ hr{margin:5px 0px;}
 	.am-form-content{margin-left:85px;}
 
 	/*侧边栏*/
-	aside{ display:block;width:130px; float:left;margin-left: -100%;padding-top:10px;}
+	aside{ display:block;width:130px;float:left}
 	aside ul{ margin-left:10px;margin-right:-10px;padding:0px 8px;font-size:14px ;background: #fff;}
 	aside a{display: block;overflow: hidden;text-decoration: none;line-height: 28px;color: #000;height: 28px;}
 	aside ul li{text-align: center;}
@@ -503,7 +503,7 @@ input.add,input.min{width:15px}
 	.nav-cont .nav-extra{position: absolute;right:0;top:6px;font-size: 16px;color:#fcff00;line-height:33px;height:33px ;width:160px;text-align:center;background: url(../../images/extra.png);cursor: pointer;}
 	.nav-cont .nav-extra i.nav-user{background:#000 ;color:#fff ;width: 33px;height: 33px;border-radius: 33px;position: absolute;left:-28px;z-index: 99;padding: 5px;overflow: hidden;}
 	.nav-cont .nav-extra b{display:block;position: absolute;width: 45px;height: 45px;border-radius:45px;z-index: 1;left: -33px;top: -8px;background: #fff;}
-	b.line{display: block;width:100%;height:2px ;border-bottom:2px solid #abd011;position: absolute;top:180px;z-index:5;}
+	b.line{display: block;width:100%;height:2px ;border-bottom:2px solid #abd011;position: absolute;z-index:5;}
 }
 
 @media only screen and (min-width: 1260px) {
@@ -671,5 +671,5 @@ p.cart_num {width: 21px; height: 21px; display: block; border-radius: 50%;backgr
 	.menu .col-6,.full-width .col-6{float:left;margin:0 0 0 5%;width:90%}
 }
 .style-1 .menu, .style-1.menu ul li  {}
-.style-1 {padding-right:244px}
+.style-1 {}
 

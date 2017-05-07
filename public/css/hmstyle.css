@@ -202,7 +202,7 @@ dt + dd {margin-top: 0;}
 	.row li{width: 25%;float: left;}
 
 }
-
+.btn_line{border-bottom: 2px solid #abd011;}
 
 @media only screen and (min-width: 640px) {
 	/*标题*/
@@ -697,7 +697,7 @@ dt + dd {margin-top: 0;}
 	.banner .am-slider .am-slides img{width:954px ;left:50% ;position: absolute;margin-left: -438px;}
 
 	/*第二套轮播图布局*/
-	.bannerTwo{width:100%;height: 400px;padding-right:245px}
+	.bannerTwo{width:100%;height: 400px}
 	/*公告布局*/
 	.marqueen {width:220px;height: 404px;text-align: left;top:60px;padding: 10px;}
 	.demo{padding-top: 5px;}

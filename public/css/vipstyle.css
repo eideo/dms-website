@@ -55,7 +55,7 @@ a.i-trigger { cursor: pointer;position: relative; z-index: 2;display: block;colo
 .navCir li.active a{color:#F03726 ;}
 
 .footer{margin-bottom:60px ;}
-@media only screen and (min-width:640px) 
+@media only screen and (min-width:640px)
 {
 /*布局*/
 .m-user {background:none}
@@ -268,7 +268,7 @@ a.i-trigger { cursor: pointer;position: relative; z-index: 2;display: block;colo
 
 /*优惠券、积分商城*/
 .twoTab{display: block;width: 100%;height:210px;}
-.twoTab .twoTabModel{width:50%;background: #fff;float: left;height:100%;position: relative;border:1px solid transparent ;}
+.twoTab .twoTabModel{width:100%;background: #fff;float: left;height:100%;position: relative;border:1px solid transparent ;}
 .twoTabModel:last-child{border-left: 1px solid #e7e7e7;}
 .twoTabModel .squareTitle {width: 100%;height: 42px;line-height: 42px;margin-bottom:10px ;}
 .squareTitle a{height: 100%;display: block;position: relative;padding-left: 25px;font-weight: 600;font-size: 16px;}
@@ -276,7 +276,7 @@ a.i-trigger { cursor: pointer;position: relative; z-index: 2;display: block;colo
 .squareTitle a i {position: absolute;right: 16px;}
 
 .twoTabModel .Box{width:90%;margin:0px auto}
-.Box .CouponList{width:225px;height:130px;margin:0px auto;background:url(../images/coupon-bg.png);position: relative; }
+.Box .CouponList{width:225px;height:130px;float:left;background:url(../images/coupon-bg.png);position: relative; }
 .Box .CouponList .price {position: absolute;font-size: 18px;font-weight:600;font-family: "Microsoft Yahei";color: #fd6d37;left: 17px;top: 35px;}
 .price strong {position: absolute;top: -7px;left:15px;font-size: 32px;}
 .Box .CouponList .brandName {position: absolute;top: 30px;left: 103px;width: 109px;height: 14px;white-space: nowrap;overflow: hidden;}

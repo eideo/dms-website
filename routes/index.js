@@ -25,5 +25,12 @@ router.get('/search.html', function(req, res, next) {
 router.get('/shopcart.html', function(req, res, next) {
   res.render('home/shopcart', { title: '搜索' });
 });
+router.get('/information.html', function(req, res, next) {
+  res.render('person/information', { title: '个人中心' });
+});
+router.get('/user-index.html', function(req, res, next) {
+  res.render('person/user-index', { title: 'wode' });
+});
+
 
 module.exports = router;
