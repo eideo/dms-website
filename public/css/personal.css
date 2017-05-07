@@ -181,7 +181,7 @@ hr{margin:5px 0px;}
 .suggestmain .am-btn.anniu{width:100%;margin:20px auto 25px;}
 .suggestTel i{margin-right:10px ;}
 /*底部*/
-.footer{display:none; text-align: center;border-top: 2px solid #F8F8F8 margin-top:20px; padding-top: 5px;}
+.footer{display:none; text-align: center;border-top: 2px solid #F8F8F8;margin-top:20px; padding-top: 5px;}
 .main-wrap {background-color:#fff;}
 @media only screen and (min-width:640px)
 {
@@ -261,7 +261,7 @@ hr{margin:5px 0px;}
 	.am-padding {margin:20px 0px ;}
 	.am-text-danger {color: #000}
 	/*底部*/
-	.footer {text-align:left; display:block;position: relative;margin: 0px auto; padding: 7px 0px 9px;border-top: 2px solid #5aa300; margin-top:20px;}
+	.footer {text-align:left; display:block;position: relative;margin: 0px auto; padding: 7px 0px 9px;margin-top:20px;}
 	.footer .footer-bd p, .footer .footer-hd p {margin-bottom: 8px;line-height: 27px;border-bottom: 1px solid #DDD; text-align:left;}
 	.footer .footer-hd a { margin: 0px 4px;white-space: nowrap;color: #6C6C6C;}
 	.footer .footer-hd b { margin: 0px 3px;font-weight: 400;color: #DDD;}
@@ -460,7 +460,7 @@ input.add,input.min{width:15px}
 	.nav.white{ position:relative;top:0;z-index:0;}
 	#ai-topsearch{ font-size:18px;}
 	/*底部*/
-	.footer {text-align:left; display:block;position: relative;margin: 0 auto; padding: 7px 0 9px;border-top: 2px solid #64b204; margin-top:20px;}
+	.footer {text-align:left; display:block;position: relative;margin: 0 auto; padding: 7px 0 9px;margin-top:20px;}
 	.footer .footer-bd p, .footer .footer-hd p {margin-bottom: 8px;line-height: 27px;border-bottom: 1px solid #DDD; text-align:left;}
 	.footer .footer-hd a { margin: 0 4px;white-space: nowrap;color: #6C6C6C;}
 	.footer .footer-hd b { margin: 0 3px;font-weight: 400;color: #DDD;}

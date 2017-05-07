@@ -2,247 +2,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<title>商品页面</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
-		<link type="text/css" href="../css/optstyle.css" rel="stylesheet" />
-		<link type="text/css" href="../css/style.css" rel="stylesheet" />
+		<link type="text/css" href="css/optstyle.css" rel="stylesheet" />
+		<link type="text/css" href="css/style.css" rel="stylesheet" />
 
 		<script type="text/javascript" src="../basic/js/jquery-1.7.min.js"></script>
 		<script type="text/javascript" src="../basic/js/quick_links.js"></script>
 
-		<script type="text/javascript" src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
-		<script type="text/javascript" src="../js/jquery.imagezoom.min.js"></script>
-		<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
-		<script type="text/javascript" src="../js/list.js"></script>
+		<script type="text/javascript" src="js/list.js"></script>
 
 		<link href="../basic/css/demo.css" rel="stylesheet" type="text/css" />
 		<link href="../css/hmstyle.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<script type="text/javascript" src="../js/jquery.flexslider.js"></script>
 		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
-		<script type="text/javascript" src="home.js"></script>
 	</head>
 
 	<body>
-	<div class="hmtop">
-		<!--顶部导航条 -->
-		<div class="am-container header">
-			<ul class="message-l">
-				<li class="topMessage">
-					<div class="menu-hd">
-						<a href="login.html" target="_top" class="h">亲，请登录</a>
-						<a href="register.html" target="_top">免费注册</a>
-					</div>
-				</li>
-			</ul>
-			<ul class="message-r">
-				<li class="topMessage home">
-					<div class="menu-hd"><a href="home2.html" target="_top" class="h">商城首页</a></div>
-				</li>
-				<li class="topMessage my-shangcheng">
-					<div class="menu-hd MyShangcheng"><a href="../person/information.html" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
-				</li>
-				<li class="topMessage favorite">
-					<div class="menu-hd"><a href="sort.html" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
-				</li>
-			</ul>
-		</div>
-		<!--顶部导航条 end-->
-
-		<!--悬浮搜索框-->
-		<div class="nav white">
-			<div class="logo"><img src="../images/logo.png" /></div>
-			<ul class="logoBig">
-				<li><img src="../images/logobig.png" /></li>
-			</ul>
-			<div class="search-bar pr">
-				<a name="index_none_header_sysc" href="search.html"></a>
-				<form>
-					<input id="searchInput" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
-					<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="submit">
-				</form>
-				<div class="menu-hd menu-cart" style="float: right">
-					<a id="mc-menu-hd" href="shopcart.html" target="_top">
-						<i class="am-icon-shopping-cart  am-icon-fw"></i>
-						<span>购物车</span>
-						<strong id="J_MiniCartNum" class="h">0</strong>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div class="clear"></div>
-	</div>
-	<b class="line"></b>
-	<div class="shopNav">
-		<div class="slideall" style="height: auto;">
-			<div class="nav-cont">
-				<ul>
-					<li class="index select"><a href="home2.html">首页</a></li>
-					<li class="qc"><a href="#">热门抢购</a></li>
-					<li class="qc"><a href="#">新品尝鲜</a></li>
-					<li class="qc"><a href="#">热门推荐</a></li>
-				</ul>
-			</div>
-			<div class="container">
-				<div class="menu style-1">
-					<ul class="menu">
-						<li class="a">
-							<a href="#"><img src="../img/icon_sg.png" alt="蔬菜"/>蔬菜</a>
-							<div class="mega-menu full-width">
-								<div class="col-2">
-									<h4>茎叶</h4>
-									<ol>
-										<li><a href="#">白菜</a></li>
-										<li><a href="#">生菜</a></li>
-										<li><a href="#">卷心菜</a></li>
-									</ol>
-								</div>
-								<div class="col-2">
-									<h4>根茎</h4>
-									<ol>
-										<li><a href="#">土豆</a></li>
-										<li><a href="#">番薯</a></li>
-										<li><a href="#">紫薯</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_ly.png" alt="粮油副食"/>粮油副食</a>
-							<div class="mega-menu full-width">
-								<div class="col-1">
-									<h4>茎叶</h4>
-									<ol>
-										<li><a href="#">白菜</a></li>
-									</ol>
-								</div>
-								<div class="col-1">
-									<h4>根茎</h4>
-									<ol>
-										<li><a href="#">土豆</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_rs.png" alt="禽蛋肉"/>禽蛋肉</a>
-							<div class="mega-menu full-width">
-								<div class="col-2">
-									<h4>鸡</h4>
-									<ol>
-										<li><a href="#">乌鸡</a></li>
-										<li><a href="#">土鸡</a></li>
-										<li><a href="#">火鸡</a></li>
-									</ol>
-								</div>
-								<div class="col-1">
-									<h4>鸭</h4>
-									<ol>
-										<li><a href="#">土鸭</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_sx.png" alt="干菌干菜"/>干菌干菜</a>
-							<div class="mega-menu full-width">
-								<div class="col-1">
-									<h4>香菇</h4>
-									<ol>
-										<li><a href="#">白菜</a></li>
-									</ol>
-								</div>
-								<div class="col-1">
-									<h4>木耳</h4>
-									<ol>
-										<li><a href="#">土豆</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_lh.png" alt="礼盒类"/>礼盒类</a>
-							<div class="mega-menu full-width">
-								<div class="col-1">
-									<h4>情人节</h4>
-									<ol>
-										<li><a href="#">白菜</a></li>
-									</ol>
-								</div>
-								<div class="col-1">
-									<h4>年货</h4>
-									<ol>
-										<li><a href="#">土豆</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_ls.png" alt="礼品卡券"/>礼品卡券</a>
-							<div class="mega-menu full-width">
-								<div class="col-1">
-									<h4>购物</h4>
-									<ol>
-										<li><a href="#">购物</a></li>
-									</ol>
-								</div>
-								<div class="col-1">
-									<h4>丽人</h4>
-									<ol>
-										<li><a href="#">美容</a></li>
-										<li><a href="#">按摩</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-						<li>
-							<a href="#"><img src="../img/icon_yp.png" alt="后院农家"/>后院农家</a>
-							<div class="mega-menu full-width">
-								<div class="col-1">
-									<h4>青菜</h4>
-									<ol>
-										<li><a href="#">豆芽</a></li>
-									</ol>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!--小导航 -->
-			<div class="am-g am-g-fixed smallnav">
-				<div class="am-u-sm-3">
-					<a href="sort.html">
-						<img src="../images/navsmall.jpg" />
-						<div class="title">商品分类</div>
-					</a>
-				</div>
-				<div class="am-u-sm-3">
-					<a href="#">
-						<img src="../images/huismall.jpg" />
-						<div class="title">大聚惠</div>
-					</a>
-				</div>
-				<div class="am-u-sm-3">
-					<a href="#">
-						<img src="../images/mansmall.jpg" />
-						<div class="title">个人中心</div>
-					</a>
-				</div>
-				<div class="am-u-sm-3">
-					<a href="#">
-						<img src="../images/moneysmall.jpg" />
-						<div class="title">投资理财</div>
-					</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</div>
+	<% include  ../template/header.html %>
 			<div class="listMain">
 				<ol class="am-breadcrumb am-breadcrumb-slash">
 					<li><a href="home2.html">首页</a></li>
@@ -325,7 +103,7 @@
 						<!--规格属性-->
 						<!--名称-->
 						<div class="tb-detail-hd">
-							<h1>	
+							<h1>
 				大白菜 大白菜
 	          </h1>
 						</div>
@@ -334,11 +112,11 @@
 							<div class="tb-detail-price">
 								<li class="price iteminfo_price">
 									<dt>促销价</dt>
-									<dd><em>¥</em><b class="sys_item_price">56.90</b>  </dd>                                 
+									<dd><em>¥</em><b class="sys_item_price">56.90</b>  </dd>
 								</li>
 								<li class="price iteminfo_mktprice">
 									<dt>原价</dt>
-									<dd><em>¥</em><b class="sys_item_mktprice">98.00</b></dd>									
+									<dd><em>¥</em><b class="sys_item_mktprice">98.00</b></dd>
 								</li>
 								<div class="clear"></div>
 							</div>
@@ -476,7 +254,7 @@
 							<div class="pay-opt">
 							<a href="home.html"><span class="am-icon-home am-icon-fw">首页</span></a>
 							<a><span class="am-icon-heart am-icon-fw">收藏</span></a>
-							
+
 							</div>
 							<li>
 								<div class="clearfix tb-btn tb-btn-buy theme-login">
@@ -517,27 +295,27 @@
 							<li class="plus_icon"><i>=</i></li>
 							<li class="total_price">
 								<p class="combo_price"><span class="c-title">套餐价:</span><span>￥35.00</span> </p>
-								<p class="save_all">共省:<span>￥463.00</span></p> <a href="#" class="buy_now">立即购买</a> </li>
+								<p class="save_all">共省:<span>￥463.00</span></p> <a href="pay.html" class="buy_now">立即购买</a> </li>
 							<li class="plus_icon"><i class="am-icon-angle-right"></i></li>
 						</ul>
 					</div>
 				</div>
 				<div class="clear"></div>
-				
-							
+
+
 				<!-- introduce-->
 
 				<div class="introduce">
 					<div class="browse">
-					    <div class="mc"> 
-						     <ul>					    
-						     	<div class="mt">            
-						            <h2>看了又看</h2>        
+					    <div class="mc">
+						     <ul>
+						     	<div class="mt">
+						            <h2>看了又看</h2>
 					            </div>
-						     	
+
 							      <li class="first">
-							      	<div class="p-img">                    
-							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>               
+							      	<div class="p-img">
+							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>
 							      	</div>
 							      	<div class="p-name"><a href="#">
 							      		【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味
@@ -546,8 +324,8 @@
 							      	<div class="p-price"><strong>￥35.90</strong></div>
 							      </li>
 							      <li>
-							      	<div class="p-img">                    
-							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>               
+							      	<div class="p-img">
+							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>
 							      	</div>
 							      	<div class="p-name"><a href="#">
 							      		【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味
@@ -556,37 +334,37 @@
 							      	<div class="p-price"><strong>￥35.90</strong></div>
 							      </li>
 							      <li>
-							      	<div class="p-img">                    
-							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>               
+							      	<div class="p-img">
+							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>
 							      	</div>
 							      	<div class="p-name"><a href="#">
 							      		【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味
 							      	</a>
 							      	</div>
 							      	<div class="p-price"><strong>￥35.90</strong></div>
-							      </li>							      
+							      </li>
 							      <li>
-							      	<div class="p-img">                    
-							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>               
+							      	<div class="p-img">
+							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>
 							      	</div>
 							      	<div class="p-name"><a href="#">
 							      		【三只松鼠_开口松子】零食坚果特产炒货东北红松子原味
 							      	</a>
 							      	</div>
 							      	<div class="p-price"><strong>￥35.90</strong></div>
-							      </li>							      
+							      </li>
 							      <li>
-							      	<div class="p-img">                    
-							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>               
+							      	<div class="p-img">
+							      		<a  href="#"> <img class="" src="../images/browse1.jpg"> </a>
 							      	</div>
 							      	<div class="p-name"><a href="#">
 							      		【三只松鼠_开口松子218g】零食坚果特产炒货东北红松子原味
 							      	</a>
 							      	</div>
 							      	<div class="p-price"><strong>￥35.90</strong></div>
-							      </li>							      
-					      
-						     </ul>					
+							      </li>
+
+						     </ul>
 					    </div>
 					</div>
 					<div class="introduceMain">
@@ -655,13 +433,13 @@
 								</div>
 
 								<div class="am-tab-panel am-fade">
-									
+
                                     <div class="actor-new">
-                                    	<div class="rate">                
-                                    		<strong>100<span>%</span></strong><br> <span>好评度</span>            
+                                    	<div class="rate">
+                                    		<strong>100<span>%</span></strong><br> <span>好评度</span>
                                     	</div>
-                                        <dl>                    
-                                            <dt>买家印象</dt>                    
+                                        <dl>
+                                            <dt>买家印象</dt>
                                             <dd class="p-bfc">
                                             			<q class="comm-tags"><span>味道不错</span><em>(2177)</em></q>
                                             			<q class="comm-tags"><span>颗粒饱满</span><em>(1860)</em></q>
@@ -671,10 +449,10 @@
                                             			<q class="comm-tags"><span>个个开口</span><em>(1392)</em></q>
                                             			<q class="comm-tags"><span>价格便宜</span><em>(1119)</em></q>
                                             			<q class="comm-tags"><span>特价买的</span><em>(865)</em></q>
-                                            			<q class="comm-tags"><span>皮很薄</span><em>(831)</em></q> 
-                                            </dd>                                           
-                                         </dl> 
-                                    </div>	
+                                            			<q class="comm-tags"><span>皮很薄</span><em>(831)</em></q>
+                                            </dd>
+                                         </dl>
+                                    </div>
                                     <div class="clear"></div>
 									<div class="tb-r-filter-bar">
 										<ul class=" tb-taglist am-avg-sm-4">
@@ -1298,26 +1076,6 @@
 
 						<div class="clear"></div>
 
-						<div class="footer ">
-							<div class="footer-hd ">
-								<p>
-									<a href="#">益谷上禾</a>
-									<b>|</b>
-									<a href="home2.html">商城首页</a>
-									<b>|</b>
-									<a href="# ">物流</a>
-								</p>
-							</div>
-							<div class="footer-bd ">
-								<p>
-									<a href="# ">益谷上禾</a>
-									<a href="# ">合作伙伴</a>
-									<a href="# ">联系我们</a>
-									<a href="../person/address.html">网站地图</a>
-									<em>© 2015-2025 益谷上禾 版权所有 </em>
-								</p>
-							</div>
-						</div>
 					</div>
 
 				</div>
@@ -1481,7 +1239,7 @@
 					</div>
 				</div>
 			</div>
-
+			<% include  ../template/footer.html %>
 	</body>
 
 </html>

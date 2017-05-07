@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-,.pointlist ul li:hover,.pointlist ul li:focus{background: none;}
+.pointlist ul li:hover,.pointlist ul li:focus{background: none;}
 .usable,.pointshop,thead,.signIn{display:none;}
 .pointlist ul{width:90%;margin:10px auto ;border-radius:5px ;border:2px solid #F03726 ;background:#F03726 ;}
 .pointlist ul li{text-align: center;background:#fff ;}
