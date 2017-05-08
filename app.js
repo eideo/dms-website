@@ -4,6 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var proxy = require('express-http-proxy');
+
 var ejs = require('ejs');
 
 var index = require('./routes/index');
@@ -27,7 +29,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/number', users);
+//121.40.156.26:8188
+app.use('/api', proxy('121.40.156.26:8188', {
+  userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    data = JSON.parse(proxyResData.toString('utf8'));
+    data.newProperty = 'exciting data';
+    return JSON.stringify(data);
+  }
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,7 +53,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json(err);
 });
 
 module.exports = app;
