@@ -23,7 +23,7 @@ router.get('/search.html', function(req, res, next) {
   res.render('home/search', { title: '搜索' });
 });
 router.get('/shopcart.html', function(req, res, next) {
-  res.render('home/shopcart', { title: '搜索' });
+  res.render('home/shopcart', { title: '购物车' });
 });
 router.get('/success.html', function(req, res, next) {
   res.render('home/success', { title: '个人中心' });
