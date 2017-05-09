@@ -11,13 +11,15 @@
 		<meta http-equiv="Cache-Control" content="no-siteapp" />
 
 		<link rel="stylesheet" href="/AmazeUI-2.4.2/assets/css/amazeui.css" />
+		<script src="/amazeui-2.4.2/assets/js/jquery.min.js"></script>
 		<link href="/css/dlstyle.css" rel="stylesheet" type="text/css">
+		<script src="/modules/home/login.js"></script>
 	</head>
 
 	<body>
 
 		<div class="login-boxtitle">
-			<a href="/"><img alt="logo" src="images/logobig.png" /></a>
+			<a href="/"><img alt="logo" src="/images/logobig.png" /></a>
 		</div>
 
 		<div class="login-banner">
@@ -32,12 +34,12 @@
 						<div class="login-form">
 						  <form>
 							   <div class="user-name">
-								    <label for="user"><i class="am-icon-user"></i></label>
-								    <input type="text" name="" id="user" placeholder="邮箱/手机/用户名">
+								    <label for="username"><i class="am-icon-user"></i></label>
+								    <input type="text" name="username" id="username" placeholder="邮箱/手机/用户名">
                  </div>
                  <div class="user-pass">
 								    <label for="password"><i class="am-icon-lock"></i></label>
-								    <input type="password" name="" id="password" placeholder="请输入密码">
+								    <input type="password" name="password" id="password" placeholder="请输入密码">
                  </div>
               </form>
            </div>
@@ -49,7 +51,7 @@
 								<br />
             </div>
 								<div class="am-cf">
-									<input type="submit" name="" value="登 录" class="am-btn am-btn-primary am-btn-sm">
+									<input type="submit" name="" id="login" value="登 录" class="am-btn am-btn-primary am-btn-sm">
 								</div>
 						<div class="partner">		
 								<h3>合作账号</h3>
