@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>新闻页面</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  
-   <link href="/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-   <link href="/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
-   <link href="/css/personal.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<% include  ../template/header2.html %>
+<% include  ../template/inner_header.html %>
+<link href="/css/personal.css" rel="stylesheet" type="text/css">
+<div class="main-wrap">
 <!--文章 -->
 <div class="am-g am-g-fixed blog-g-fixed bloglist">
   <div class="am-u-md-9">
@@ -78,11 +64,11 @@
       <section class="am-panel am-panel-default">
         <div class="am-panel-hd">热门话题</div>
         <ul class="am-list blog-list">
-        	<li><a href="#"><p>[特惠]闺蜜喊你来囤国货啦</p></a></li>  
+        	<li><a href="#"><p>[特惠]闺蜜喊你来囤国货啦</p></a></li>
           <li><a href="#"><p>[公告]华北、华中部分地区配送延迟</p></a></li>
           <li><a href="#"><p>[特惠]家电狂欢千亿礼券 买1送1！</p></a></li>
           <li><a href="#"><p>[公告]商城与广州市签署战略合作协议</p></a></li>
-          <li><a href="#"><p>[特惠]洋河年末大促，低至两件五折</p></a></li>      
+          <li><a href="#"><p>[特惠]洋河年末大促，低至两件五折</p></a></li>
         </ul>
       </section>
 
@@ -90,10 +76,8 @@
   </div>
 
 </div>
-
-        <% include  ../template/footer.html %>
 </div>
-</div>
+<% include  ../template/inner_footer.html %>
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
@@ -104,6 +88,3 @@
 <script src="/AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="/AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
-
-</body>
-</html>
