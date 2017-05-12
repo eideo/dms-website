@@ -5,6 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var proxy = require('express-http-proxy');
+var session = require('express-session');
+
 
 var ejs = require('ejs');
 
@@ -28,12 +30,34 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  resave: true, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
+  secret: 'dms'
+}));
+app.use(function (req, res, next) {
+  if(req.session && req.session.user){
+    res.locals.user = req.session.user;
+  }else{
+    res.locals.user = '';
+  }
+  next();
+});
+var isLogin = function(req, res, next) {
+  if (req.session && req.session.user){
+    return next();
+  }
+  res.redirect('/');
+};
 app.use('/', index);
-//121.40.156.26:8188
-app.use('/api', proxy('121.40.156.26:8188', {
+app.all('/member/**', isLogin);
+app.use('/member', users);
+
+//var proxyHost = "121.40.156.26:8188";
+var proxyHost = "localhost:8700";
+app.use('/api', proxy(proxyHost, {
   userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
     data = JSON.parse(proxyResData.toString('utf8'));
-    data.newProperty = 'exciting data';
     return JSON.stringify(data);
   }
 }));

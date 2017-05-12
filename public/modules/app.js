@@ -1,7 +1,7 @@
 /**
  * Created by tanxinzheng on 17/5/9.
  */
-angular.module('dmsApp', [
+var app = angular.module('dmsApp', [
     'ngResource',
     'app.rest'
 ]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {

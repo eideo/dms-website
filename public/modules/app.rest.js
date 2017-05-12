@@ -11,7 +11,15 @@ angular.module('app.rest', [
                 openId: '@openId'
             }
         },
-        login: {method: 'GET', url: "/api/", isArray: false}
+        login: {
+            method: 'POST',
+            url: "/login",
+            transformRequest:function(val){
+                return $.param(val);
+            },
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8' },
+            isArray: false
+        }
     });
 }]).factory("MemberAPI", ["Resource", function (Resource) {
     return Resource("/wx/member/:id", {id: "@id"}, {
