@@ -6,7 +6,7 @@ angular.module('app.rest', [
 ]).factory("AppAPI", ["Resource", function (Resource) {
     return Resource("/account/:id", {id: "@id"}, {
         getAccount: {
-            method: "GET", url: "/api/wx/userInfo", isArray: false, params: {
+            method: "GET", url: "/api/wb/userInfo", isArray: false, params: {
                 memberId: '@memberId',
                 openId: '@openId'
             }
@@ -22,60 +22,66 @@ angular.module('app.rest', [
         }
     });
 }]).factory("MemberAPI", ["Resource", function (Resource) {
-    return Resource("/wx/member/:id", {id: "@id"}, {
+    return Resource("/wb/member/:id", {id: "@id"}, {
         update: {
-            method: "PUT", url: "/api/wx/member/:id", params: {
+            method: "PUT", url: "/api/wb/member/:id", params: {
                 id: '@id',
                 mobile: '@mobile'
             }
+        },
+        getAccount:{
+            method:"GET", url:"/api/member/account", isArray:false
         }
     });
 }]).factory("BindAPI", ["Resource", function (Resource) {
-    return Resource("/wx/:memberId", {id: "@id"}, {
+    return Resource("/wb/:memberId", {id: "@id"}, {
         bindMember: {
-            method: "PUT", url: "/api/wx/bindMember", params: {
+            method: "PUT", url: "/api/wb/bindMember", params: {
                 openId: "@openId",
                 mobile: "@mobile"
             }, isArray: false
         }
     });
 }]).factory("AddressAPI", ["Resource", function (Resource) {
-    return Resource("/wx/memberAddress/:id", {id: "@id"}, {
+    return Resource("/wb/memberAddress/:id", {id: "@id"}, {
         query: {isArray: true},
-        getDefaultAddress: {url: '/api/wx/getDefaultAddress', method: 'GET', isArray: false}
+        getDefaultAddress: {url: '/api/wb/memberAddress/default', method: 'GET', isArray: false},
+        defaultAddress: {url: '/api/wb/memberAddress/default', method: 'PUT', params:{
+            addressId:"@addressId"
+        }}
     });
 }]).factory("OrderAPI", ["Resource", function (Resource) {
-    return Resource("/wx/order/:id", {id: "@id"}, {
+    return Resource("/wb/order/:id", {id: "@id"}, {
         query: {
             isArray: true, params: {
                 memberId: "@memberId"
             }
         },
         cancel: {
-            url: '/api/wx/order/cancel', method: "POST", params: {
+            url: '/api/wb/order/cancel', method: "POST", params: {
                 id: "@id",
                 memberId: "@memberId"
             }
         },
         getStatistic: {
-            url: '/api/wx/order/statistic', method: "GET", params: {
+            url: '/api/wb/order/statistic', method: "GET", params: {
                 memberId: "@memberId"
             }
         },
-        getCouponProduct: {url: '/api/wx/order/coupon', method: 'GET', isArray: true},
-        confirm: {url: '/api/wx/order/confirm', method: 'POST', isArray: true},
-        pay: {url: '/api/wx/order/pay', method: 'POST'},
-        weixinPay: {url: '/api/wx/api/payOrder', method: 'POST'}
+        getCouponProduct: {url: '/api/wb/order/coupon', method: 'GET', isArray: true},
+        confirm: {url: '/api/wb/order/confirm', method: 'POST', isArray: true},
+        pay: {url: '/api/wb/order/pay', method: 'POST'},
+        weixinPay: {url: '/api/wb/api/payOrder', method: 'POST'}
     });
 }]).factory("CouponAPI", ["Resource", function (Resource) {
-    return Resource("/wx/coupon/:id", {id: "@id"}, {
+    return Resource("/wb/coupon/:id", {id: "@id"}, {
         query: {
             isArray: true, params: {
                 memberId: "@memberId"
             }
         },
         bindCard: {
-            method: 'POST', url: '/api/wx/coupon/bind', params: {
+            method: 'POST', url: '/api/wb/coupon/bind', params: {
                 memberId: "@memberId",
                 couponNumber: "@couponNumber"
             }
@@ -86,10 +92,10 @@ angular.module('app.rest', [
         query: {method: "GET", url: "/payment", isArray: false}
     });
 }]).factory("ProductAPI", ["Resource", function (Resource) {
-    return Resource("/wx/product/:id", {id: "@id"}, {
+    return Resource("/wb/product/:id", {id: "@id"}, {
         query: {isArray: false},
         getCartProduct: {
-            isArray: true, url: '/api/wx/cart', method: "GET", params: {
+            isArray: true, url: '/api/wb/cart', method: "GET", params: {
                 productIds: "@productIds"
             }
         }
@@ -103,7 +109,7 @@ angular.module('app.rest', [
         query: {isArray: false}
     })
 }]).factory("CartAPI", ["localStorage", 'Resource', function (localStorage, Resource) {
-    return Resource("/wx/cart/:id", {id: "@id"}, {
+    return Resource("/wb/cart/:id", {id: "@id"}, {
         query: {isArray: true}
     })}
 ]);

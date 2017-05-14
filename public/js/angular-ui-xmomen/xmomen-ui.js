@@ -1,4 +1,5 @@
 angular.module("xmomen.ui",[
+    "xmomen.validate"
     //pagination.name,
     //uiDirective.name,
     //dialog.name,
@@ -6,7 +7,25 @@ angular.module("xmomen.ui",[
     //datetimepicker.name,
     //grid.name
     //validate.name
-]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {
+]).factory('$dialog', ['$q', function($q){
+    return {
+        alert: function(msg){
+            layer.alert(msg);
+        },
+        confirm: function(msg){
+            var deferred = $q.defer;
+            layer.confirm(msg, {
+                btn: ['确定','取消'], //按钮
+                shade: false //不显示遮罩
+            }, function(){
+                deferred.resolve();
+            }, function(){
+                deferred.reject();
+            });
+            return deferred.promise;
+        }
+    }
+}]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {
     return function( url, params, methods ) {
 
         var defaults = {

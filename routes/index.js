@@ -19,6 +19,11 @@ router.get('/login', function(req, res, next) {
     var data = JSON.parse(resp.body);
     if(data && data.status == 200){
       req.session.user = data.username;
+      var cookies = resp['headers']['set-cookie'];
+      console.log(cookies);
+      for (var i = 0; i < cookies.length; i++) {
+        res.setHeader('set-cookie', cookies);
+      }
       res.redirect('/member/center');
     }else{
       res.render('home/login', {

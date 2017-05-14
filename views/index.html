@@ -1,123 +1,117 @@
 <% include  template/header.html %>
-
+<script src="/modules/index.js"></script>
 <!--标题 -->
 <div class="container" ng-controller="indexCtrl">
   <div class="menu style-1">
     <ul class="menu">
-      <li><a href="#">
-        <img src="/img/icon_sg.png" style="width: 45px" alt=""/>蔬菜</a>
+      <li ng-repeat="item in categorys">
+        <a href="#">
+          <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
+        </a>
         <div class="mega-menu full-width">
           <div class="col-1">
-            <h4><a href="/search.html">茎叶</a></h4>
+            <h4>
+              <a href="/search.html" ng-bind="item.name"></a>
+            </h4>
             <ol>
-              <li><a href="/search.html">白菜</a></li>
-              <li><a href="/search.html">生菜</a></li>
-              <li><a href="/search.html">卷心菜</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="/search.html">根茎</a></h4>
-            <ol>
-              <li><a href="/search.html">土豆</a></li>
-              <li><a href="/search.html">番薯</a></li>
-              <li><a href="/search.html">紫薯</a></li>
+              <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
             </ol>
           </div>
         </div>
       </li>
-      <li><a href="#"><img src="/img/icon_ly.png" alt=""/>粮油副食</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">茎叶</a></h4>
-            <ol>
-              <li><a href="#">白菜</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="#">根茎</a></h4>
-            <ol>
-              <li><a href="#">土豆</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
-      <li><a href="#"><img src="/img/icon_rs.png" alt=""/>禽蛋肉</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">鸡</a></h4>
-            <ol>
-              <li><a href="#">乌鸡</a></li>
-              <li><a href="#">土鸡</a></li>
-              <li><a href="#">火鸡</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="#">鸭</a></h4>
-            <ol>
-              <li><a href="#">土鸭</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
-      <li><a href="#"><img src="/img/icon_sx.png" alt="" />干菌干菜</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">香菇</a></h4>
-            <ol>
-              <li><a href="#">白菜</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="#">木耳</a></h4>
-            <ol>
-              <li><a href="#">土豆</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
-      <li><a href="#"><img src="/img/icon_lh.png" alt="" />礼盒类</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">情人节</a></h4>
-            <ol>
-              <li><a href="#">白菜</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="#">年货</a></h4>
-            <ol>
-              <li><a href="#">土豆</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
-      <li><a href="#"><img src="/img/icon_ls.png" alt="" />礼品卡券</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">购物</a></h4>
-            <ol>
-              <li><a href="#">购物</a></li>
-            </ol>
-          </div>
-          <div class="col-1">
-            <h4><a href="#">丽人</a></h4>
-            <ol>
-              <li><a href="#">美容</a></li>
-              <li><a href="#">按摩</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
-      <li><a href="#"><img src="/img/icon_yp.png" alt=""/>后院农家</a>
-        <div class="mega-menu full-width">
-          <div class="col-1">
-            <h4><a href="#">青菜</a></h4>
-            <ol>
-              <li><a href="#">豆芽</a></li>
-            </ol>
-          </div>
-        </div>
-      </li>
+      <!--<li><a href="#"><img src="/img/icon_ly.png" alt=""/>粮油副食</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">茎叶</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">白菜</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">根茎</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">土豆</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#"><img src="/img/icon_rs.png" alt=""/>禽蛋肉</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">鸡</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">乌鸡</a></li>-->
+              <!--<li><a href="#">土鸡</a></li>-->
+              <!--<li><a href="#">火鸡</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">鸭</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">土鸭</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#"><img src="/img/icon_sx.png" alt="" />干菌干菜</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">香菇</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">白菜</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">木耳</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">土豆</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#"><img src="/img/icon_lh.png" alt="" />礼盒类</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">情人节</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">白菜</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">年货</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">土豆</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#"><img src="/img/icon_ls.png" alt="" />礼品卡券</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">购物</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">购物</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">丽人</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">美容</a></li>-->
+              <!--<li><a href="#">按摩</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
+      <!--<li><a href="#"><img src="/img/icon_yp.png" alt=""/>后院农家</a>-->
+        <!--<div class="mega-menu full-width">-->
+          <!--<div class="col-1">-->
+            <!--<h4><a href="#">青菜</a></h4>-->
+            <!--<ol>-->
+              <!--<li><a href="#">豆芽</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</li>-->
     </ul>
   </div>
 </div>
