@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="page navbar js_show">
+    <div class="page__bd" style="height: 100%;">
+        <div class="weui-tab">
+            <div class="weui-navbar">
+                <div class="weui-navbar__item" style="padding:0px">
+                    <div class="fl">
+                        <b class="ml12"><a href="#" onclick="back('${webRoot}/wxApi/html/contacts.do')"><img src="${webRoot}/webpage/wx/assets/icon_west.png">返回</a></b>
+                    </div>
+                    <span style="text-align: center;font-size: 18px;line-height: 40px;">${titleName}</span>
+                    <div class="pd1em fr">
+                        <c:choose>
+                            <c:when test="${zixun.status == '0' && messageType=='01'}">
+                                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary mt4" onclick="payOrder()">下单</a>
+                            </c:when>
+                            <c:when test="${zixun.status == '0' && messageType=='03'}">
+                                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary mt4" onclick="payQunliaoOrder()">引荐</a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary mt4" style=""></a>
+                            </c:otherwise>
+                        </c:choose>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-tab__panel">
+                <div class="weui-pull-to-refresh__layer">
+                    <div class='weui-pull-to-refresh__arrow'></div>
+                    <div class='weui-pull-to-refresh__preloader'></div>
+                    <div class="down">加载更多</div>
+                    <div class="up">释放刷新</div>
+                    <div class="refresh">正在加载</div>
+                </div>
+                <article>
+                    <div class=""><span class=""></span></div>
+                    <input type="hidden" id="titleName" value="${titleName}">
+                    <input type="hidden" id="sessionId" value="${userId}">
+                    <input type="hidden" id="currentRoomNo" value="${roomNo}">
+                    <input type="hidden" id="type" value="${type}">
+                    <input type="hidden" id="toUserId" value="${toUserId}">
+                    <input type="hidden" id="allZjUserId" value="${allZjUserId}">
+                    <input type="hidden" id="avatarUrl" value="${wxUser.avatarUrl}">
+                    <input type="hidden" id="zixunId" value="${zixun.id}">
+                    <input type="hidden" id="zixunUser" value="${zixun.zixunUser}">
+                    <input type="hidden" id="messageType" value="${messageType}">
+                    <div class="flex-column wl">
+                        <div class="cdiv weui-pull-to-refresh" id="messageDiv" ontouchstart>
+                            <!--消息列表页面-->
+                        </div>
+                    </div>
+                    <div class="footer flex-row">
+                        <input id="message" value="" placeholder="" class="message-input fl"/>
+                        <button class="send-message-btn fr" type="button" style="width: 20%;" onclick="sendMessage()">发送</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

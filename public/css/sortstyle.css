@@ -64,17 +64,17 @@ img{width:100%;}
 .am-dimmer {background:#fff ;}
 
 @media only screen and (min-width: 640px) {
-    #nav{margin-top:0px ;}
+    #nav{margin-top:20px ;}
     .sort-side .dl-sort {float: left;width:50%;font-size:16px ;}
     .category-content .category {width: 180px;}
     .category-content .category-info {width:176px;overflow: hidden;}
-    .category-content .category-list li {height:80px;text-align: center;}
+    .category-content .category-list li {height:45px;text-align: center;}
     .category-content .category-name i{top: 5px;display:block;left:50%;margin-left:-13px ;}
     .category-content .category-name i img{width: 25px; height: 25px; border-radius:25px;}
 
     .category-content .b-category-name {line-height:40px;font-size:16px ;}
     .category-content .menu-item {left: 183px;}
-    .category-content .category-info em {position: absolute;top:50%;margin-top: -7px;}
+    .category-content .category-info em {position: absolute;top:22px;margin-top: -7px;}
     .sort-side dd a {line-height: 20px;padding:10px;width:90px;text-align: center;}
 }
 
