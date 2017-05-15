@@ -13,6 +13,7 @@ var ejs = require('ejs');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var appConfig = require('./app.config');
 
 var app = express();
 
@@ -30,7 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+var env = app.get('env');
 //app.set('trust proxy', '127.0.0.1');
 //on('proxyReq', function(proxyReq){ proxyReq.setHeader('cookie', 'sessionid=' + cookieSnippedValue)
 app.use(session({
@@ -57,7 +58,7 @@ app.all('/member/**', isLogin);
 app.use('/member', users);
 
 //var proxyHost = "121.40.156.26:8188";
-var proxyHost = "localhost:8700";
+var proxyHost = appConfig[env]['apiHost'];
 app.use('/api', proxy(proxyHost, {
   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
     // you can update headers

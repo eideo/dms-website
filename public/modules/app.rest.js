@@ -92,7 +92,7 @@ angular.module('app.rest', [
         query: {method: "GET", url: "/payment", isArray: false}
     });
 }]).factory("ProductAPI", ["Resource", function (Resource) {
-    return Resource("/wb/product/:id", {id: "@id"}, {
+    return Resource("/wx/product/:id", {id: "@id"}, {
         query: {isArray: false},
         getCartProduct: {
             isArray: true, url: '/api/wb/cart', method: "GET", params: {

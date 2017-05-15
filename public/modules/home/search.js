@@ -1,9 +1,9 @@
 /**
  * Created by tanxinzheng on 17/5/8.
  */
-app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI', 'CartAPI',
-function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, CartAPI){
-    var params = $UrlUtils.getParameters();
+app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI',
+function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI){
+    $scope.queryParams = {};
     $scope.labelQuery = function(label){
         $scope.queryParams.label = label;
         $scope.getProducts();
@@ -48,10 +48,11 @@ function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, CartAPI){
         });
     };
     var init = function(){
-        if(params.type){
+        $scope.queryParams = $UrlUtils.getParameters();
+        if($scope.queryParams.type){
             $scope.queryParams.categoryId = params.type;
         }
-        if(params.label){
+        if($scope.queryParams.label){
             $scope.queryParams.label = params.label;
         }
         $scope.getProducts();
