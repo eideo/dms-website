@@ -3,6 +3,10 @@
  */
 app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI',
 function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI){
+    $scope.pageSetting = {
+        category1:null,
+        category2:null
+    };
     $scope.queryParams = {};
     $scope.labelQuery = function(label){
         $scope.queryParams.label = label;
@@ -31,10 +35,22 @@ function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI){
             $scope.products = data.data;
         })
     };
+    $scope.choseLevel = function(item){
+        var datas = angular.copy(item);
+        if(item.nodes){
+            datas.nodes.splice(0,0, {id:null,name:'全部'});
+        }
+        $scope.pageSetting.categoryTop = datas;
+        $scope.pageSetting.category2 = null;
+    };
+    $scope.choseLevel2 = function(item){
+        $scope.pageSetting.category2 = item;
+    };
     $scope.categorys = [];
     $scope.getCategory = function(){
         CategoryAPI.query({}, function(data){
             $scope.categorys = data;
+            $scope.categorys.splice(0,0, {id:null,name:'全部'})
         })
     };
     $scope.pushCarts = function(item){
