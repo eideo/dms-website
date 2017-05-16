@@ -39,4 +39,8 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', function($sc
         })
     };
     $scope.getCategory();
+    $scope.queryParams = {};
+    $scope.goSearch = function(){
+        window.location.href = "/search.html?keyword=" + $scope.queryParams.keyword;
+    }
 }]);

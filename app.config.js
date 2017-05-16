@@ -6,7 +6,7 @@ var config = {
         apiHost:"localhost:8700"
     },
     production:{
-        apiHost:"www.1g3h.com"
+        apiHost:"system.1g3h.com"
     }
 };
 module.exports = config;

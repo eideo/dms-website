@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "hotnode ./bin/www && node-inspector &"
+    "start": "set NODE_ENV=production && hotnode ./bin/www && node-inspector &",
+    "debug": "hotnode ./bin/www && node-inspector &"
   },
   "dependencies": {
     "body-parser": "~1.17.1",

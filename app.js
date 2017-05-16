@@ -32,6 +32,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 var env = app.get('env');
+console.log("当前环境:", env);
 //app.set('trust proxy', '127.0.0.1');
 //on('proxyReq', function(proxyReq){ proxyReq.setHeader('cookie', 'sessionid=' + cookieSnippedValue)
 app.use(session({
@@ -57,8 +58,9 @@ app.use('/', index);
 app.all('/member/**', isLogin);
 app.use('/member', users);
 
-//var proxyHost = "121.40.156.26:8188";
-var proxyHost = appConfig[env]['apiHost'];
+var proxyHost = "system.1g3h.com";
+//var proxyHost = appConfig[env]['apiHost'];
+console.log("代理服务器API地址：" + proxyHost);
 app.use('/api', proxy(proxyHost, {
   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
     // you can update headers
