@@ -71,7 +71,7 @@ h3.title {
     width: 100%;
 }
 
-.login-form {
+form {
     max-width: 320px;
     margin: 20px auto;
 }
@@ -82,7 +82,7 @@ h3.title {
     margin-bottom: 5px;
 }
 
-.login-form label {
+form label {
     position: absolute;
     display: block;
     width: 40px;
@@ -94,7 +94,7 @@ h3.title {
     left: 1px
 }
 
-.login-form input {
+form input {
     font-size: 14px;
     line-height: 18px;
     height: 42px;
@@ -170,7 +170,7 @@ input:-webkit-autofill {
 }
 
 input#code {
-    width: 80%;
+    width: 60%;
 }
 
 #dyMobileButton {

@@ -9,19 +9,9 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="stylesheet" href="/AmazeUI-2.4.2/assets/css/amazeui.css"/>
-    <link href="/js/layer/skin/default/layer.css" rel="stylesheet" type="text/css">
+    <% include  ../template/script.html %>
 
-    <script src="/js/jquery/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/layer/layer.js" type="text/javascript"></script>
     <link href="/css/dlstyle.css" rel="stylesheet" type="text/css">
-
-    <script src="/js/angular/angular.js"></script>
-    <script src="/js/angular-resource/angular-resource.js"></script>
-    <script src="/js/angular-ui-xmomen/validate.js"></script>
-    <script src="/js/angular-ui-xmomen/xmomen-ui.js"></script>
-    <script src="/modules/app.rest.js"></script>
-    <script src="/modules/app.js"></script>
 
     <script src="/modules/home/login.js"></script>
 </head>
@@ -54,22 +44,22 @@
                 <!--<label for="remember-me">-->
                     <!--<input id="remember-me" type="checkbox">记住密码</label>-->
                 <a href="#" class="am-fr">忘记密码</a>
-                <a href="register.html" class="zcnext am-fr am-btn-default">注册</a>
+                <a href="/register" class="zcnext am-fr am-btn-default">注册</a>
                 <br/>
             </div>
             <div class="am-cf">
                 <input type="submit" ng-disabled="!user.username || !user.password" ng-click="login()" id="login" value="登 录"
                        class="am-btn am-btn-primary am-btn-sm">
             </div>
-            <div class="partner">
-                <h3>合作账号</h3>
+            <!--<div class="partner">-->
+                <!--<h3>合作账号</h3>-->
 
-                <div class="am-btn-group">
-                    <li><a href="#"><i class="am-icon-qq am-icon-sm"></i><span>QQ登录</span></a></li>
-                    <li><a href="#"><i class="am-icon-weibo am-icon-sm"></i><span>微博登录</span> </a></li>
-                    <li><a href="#"><i class="am-icon-weixin am-icon-sm"></i><span>微信登录</span> </a></li>
-                </div>
-            </div>
+                <!--<div class="am-btn-group">-->
+                    <!--<li><a href="#"><i class="am-icon-qq am-icon-sm"></i><span>QQ登录</span></a></li>-->
+                    <!--<li><a href="#"><i class="am-icon-weibo am-icon-sm"></i><span>微博登录</span> </a></li>-->
+                    <!--<li><a href="#"><i class="am-icon-weixin am-icon-sm"></i><span>微信登录</span> </a></li>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
         </form>
     </div>
