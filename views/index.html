@@ -9,7 +9,7 @@
           <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
         </a>
         <div class="mega-menu full-width">
-          <div class="col-1">
+          <div class="col-12">
             <h4>
               <a href="/search.html" ng-bind="item.name"></a>
             </h4>
@@ -19,99 +19,6 @@
           </div>
         </div>
       </li>
-      <!--<li><a href="#"><img src="/img/icon_ly.png" alt=""/>粮油副食</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">茎叶</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">白菜</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">根茎</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">土豆</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#"><img src="/img/icon_rs.png" alt=""/>禽蛋肉</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">鸡</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">乌鸡</a></li>-->
-              <!--<li><a href="#">土鸡</a></li>-->
-              <!--<li><a href="#">火鸡</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">鸭</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">土鸭</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#"><img src="/img/icon_sx.png" alt="" />干菌干菜</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">香菇</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">白菜</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">木耳</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">土豆</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#"><img src="/img/icon_lh.png" alt="" />礼盒类</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">情人节</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">白菜</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">年货</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">土豆</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#"><img src="/img/icon_ls.png" alt="" />礼品卡券</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">购物</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">购物</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">丽人</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">美容</a></li>-->
-              <!--<li><a href="#">按摩</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
-      <!--<li><a href="#"><img src="/img/icon_yp.png" alt=""/>后院农家</a>-->
-        <!--<div class="mega-menu full-width">-->
-          <!--<div class="col-1">-->
-            <!--<h4><a href="#">青菜</a></h4>-->
-            <!--<ol>-->
-              <!--<li><a href="#">豆芽</a></li>-->
-            <!--</ol>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</li>-->
     </ul>
   </div>
 </div>
@@ -188,7 +95,7 @@
 </div>
 
 
-<div class="shopMainbg">
+<div class="shopMainbg" ng-controller="indexCtrl">
   <div class="shopMain" id="shopmain">
 
     <!--热门活动 -->
@@ -197,145 +104,105 @@
     </div>
     <div class="clear "></div>
     <div class="f1">
-      <!--甜点-->
 
-      <div class="am-container " >
-        <div class="shopTitle ">
-          <h4 class="floor-title">甜品</h4>
-          <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每一道甜品都有一个故事</h3></div>
-          <div class="today-brands " style="right:0px ;top:13px;">
-            <a href="introduction.html">桂花糕</a>|
-            <a href="introduction.html">奶皮酥</a>|
-            <a href="introduction.html">栗子糕 </a>|
-            <a href="introduction.html">马卡龙</a>|
-            <a href="introduction.html">铜锣烧</a>|
-            <a href="introduction.html">豌豆黄</a>
-          </div>
-
+      <!--抢购-->
+      <div class="am-container">
+        <div class="shopTitle">
+          <h4 class="floor-title">抢购</h4>
+          <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都可以买到优质便宜的商品</h3></div>
         </div>
       </div>
 
-      <div class="am-g am-g-fixed floodSix ">
-        <div class="am-u-sm-5 am-u-md-3 text-one list">
-          <div class="word">
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-            <a class="outer" href="introduction.html"><span class="inner"><b class="text">核桃</b></span></a>
-          </div>
-          <a href="introduction.html">
-            <img src="../images/5.jpg" />
-            <div class="outer-con ">
-              <div class="title ">
-                零食大礼包开抢啦
-              </div>
-              <div class="sub-title ">
-                当小鱼儿恋上软豆腐
-              </div>
+      <div class="am-g am-g-fixe` 2d floodSix pd10">
+        <li ng-repeat="item in qiangGouProducts" class="price_box">
+          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
             </div>
-          </a>
-          <div class="triangle-topright"></div>
-        </div>
-
-        <div class="am-u-sm-7 am-u-md-5 am-u-lg-2 text-two big">
-
-          <div class="outer-con ">
-            <div class="title ">
-              雪之恋和风大福
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+                <span class="number fr">
+                  销量<span ng-bind="item.sellNum"></span>
+                </span>
+            </p>
+            <div class="goumai">
+              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+              <button type="button" class="goods_ipt-add">立即购买</button>
             </div>
-            <div class="sub-title ">
-              ¥13.8
-            </div>
-
-          </div>
-          <a href="# "><img src="../images/act1.png" /></a>
-        </div>
-
-        <li>
-          <div class="am-u-md-2 am-u-lg-2 text-three">
-            <div class="boxLi"></div>
-            <div class="outer-con ">
-              <div class="title ">
-                小优布丁
-              </div>
-              <div class="sub-title ">
-                ¥4.8
-              </div>
-
-            </div>
-            <a href="introduction.html"><img src="../images/1.jpg " /></a>
           </div>
         </li>
-        <li>
-          <div class="am-u-md-2 am-u-lg-2 text-three sug">
-            <div class="boxLi"></div>
-            <div class="outer-con ">
-              <div class="title ">
-                小优布丁
-              </div>
-              <div class="sub-title ">
-                ¥4.8
-              </div>
-
-            </div>
-            <a href="introduction.html"><img src="../images/2.jpg " /></a>
-          </div>
-        </li>
-        <li>
-          <div class="am-u-sm-4 am-u-md-5 am-u-lg-4 text-five">
-            <div class="boxLi"></div>
-            <div class="outer-con ">
-              <div class="title ">
-                小优布丁
-              </div>
-              <div class="sub-title ">
-                ¥4.8
-              </div>
-
-            </div>
-            <a href="introduction.html"><img src="../images/5.jpg" /></a>
-          </div>
-        </li>
-        <li>
-          <div class="am-u-sm-4 am-u-md-2 am-u-lg-2 text-six">
-            <div class="boxLi"></div>
-            <div class="outer-con ">
-              <div class="title ">
-                小优布丁
-              </div>
-              <div class="sub-title ">
-                ¥4.8
-              </div>
-
-            </div>
-            <a href="introduction.html"><img src="../images/3.jpg" /></a>
-          </div>
-        </li>
-        <li>
-          <div class="am-u-sm-4 am-u-md-2 am-u-lg-4 text-six">
-            <div class="boxLi"></div>
-            <div class="outer-con ">
-              <div class="title ">
-                小优布丁
-              </div>
-              <div class="sub-title ">
-                ¥4.8
-              </div>
-
-            </div>
-            <a href="introduction.html"><img src="../images/4.jpg" /></a>
-          </div>
-        </li>
+        <div class="clear "></div>
       </div>
 
-      <div class="clear "></div>
-    </div>
-  </div>
+      <!--新品-->
+      <div class="am-container">
+        <div class="shopTitle">
+          <h4 class="floor-title">新品</h4>
+          <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都有新鲜美味的有机蔬菜</h3></div>
+        </div>
+      </div>
+
+      <div class="am-g am-g-fixe` 2d floodSix pd10">
+        <li ng-repeat="item in xinPinProducts" class="price_box">
+          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
+            </div>
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+                <span class="number fr">
+                  销量<span ng-bind="item.sellNum"></span>
+                </span>
+            </p>
+            <div class="goumai">
+              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+              <button type="button" class="goods_ipt-add">立即购买</button>
+            </div>
+          </div>
+        </li>
+        <div class="clear "></div>
+      </div>
+
+      <!--推荐-->
+      <div class="am-container">
+        <div class="shopTitle">
+          <h4 class="floor-title">推荐</h4>
+          <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都可以买到优质便宜的商品</h3></div>
+        </div>
+      </div>
+
+      <div class="am-g am-g-fixe` 2d floodSix pd10">
+        <li ng-repeat="item in tuiJianProducts" class="price_box">
+          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
+            </div>
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+                <span class="number fr">
+                  销量<span ng-bind="item.sellNum"></span>
+                </span>
+            </p>
+            <div class="goumai">
+              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+              <button type="button" class="goods_ipt-add">立即购买</button>
+            </div>
+          </div>
+        </li>
+        <div class="clear "></div>
+      </div>
   <% include  template/footer.html %>
 </div>
 

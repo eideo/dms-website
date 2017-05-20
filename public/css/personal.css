@@ -1098,7 +1098,7 @@ hr {
         display: block;
         width: 100%;
         height: 2px;
-        border-bottom: 2px solid #5aa300;
+        border-bottom: 2px solid #64b204;
     }
 
     .bloglist {
@@ -2161,12 +2161,14 @@ p.cart_num {
 .menu .mega-menu a {
     float: none;
     padding: 3px;
+    width:100px;
+    text-align: center;
 }
 
 .menu ul ul, .menu .mega-menu, .menu .mega-menu ol li {
     opacity: 0;
     visibility: hidden;
-    display: none ! important / 9;
+    display: none ! important \9;
     -webkit-transition: opacity 150ms ease-in-out;
     -moz-transition: opacity 150ms ease-in-out;
     -o-transition: opacity 150ms ease-in-out;
@@ -2177,7 +2179,7 @@ p.cart_num {
 .menu li:hover > ul, .menu li:hover > .mega-menu, .menu li:hover > .mega-menu ol li {
     opacity: 1;
     visibility: visible;
-    display: block ! important / 9
+    display: block ! important \9
 }
 
 .menu ul:after {
@@ -2215,8 +2217,8 @@ p.cart_num {
     top: 9px;
     margin: 0 0 0 5px;
     position: relative;
-    border-left: 3px solid transparent/9;
-    border-right: 3px solid transparent/9
+    border-left: 3px solid transparent\9;
+    border-right: 3px solid transparent\9
 }
 
 .menu ul li ul li .arrow:after {

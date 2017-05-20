@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 /*通用格式*/
+button{outline:none}
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -214,23 +215,15 @@ li.select-result dt {
     text-align: center;
 }
 
-{
-    display: none
-;
-    float: left
-;
-    top: 20px
-;
-    padding-top: 5px
-;
-    z-index: 10
-;
-    left: 0px
-;
-    width: 300%
-;
-    position: absolute
-;
+.rr{
+    display: none;
+    float: left;
+    top: 20px;
+    padding-top: 5px;
+    z-index: 10;
+    left: 0px;
+    width: 300%;
+    position: absolute;
 }
 .select-list .dd-conent {
     display: none;
@@ -291,17 +284,56 @@ dl#select3 .dd-conent {
     position: relative;
     cursor: pointer;
 }
-
+.i-pic.limit img{
+    height:201px;
+}
 .number.fl {
     position: absolute;
-    bottom: 5px;
+    top: 234px;
     right: 5px;
 }
 
 .price.fl {
     padding: 5px;
 }
+.goumai{
+    height:0;
+    width:100%;
+    float:left;
+    background:#fff;
+}
+.goods{
+    width:100%;
+    float:left;
+    height:0;
+    background:#fff;
 
+}
+.goumai.row{left:0}
+.goumai{
+    width:100%;
+    float:left;
+    height:40px;
+    background:#0a628f;
+    color:#fff;
+    transition: width 2s;
+    -moz-transition: width 2s; /* Firefox 4 */
+    -webkit-transition: width 2s; /* Safari 和 Chrome */
+    -o-transition: width 2s; /* Opera */
+    }
+.goods_ipt-add{
+    width:50%;
+    float:left;
+    display:block;
+    background:#55be59;
+    height:40px;
+    line-height: 40px;
+    border:0;
+    color: #fff;
+}
+.goods_ipt-add:hover{
+    background:#41b145;
+}
 /*分页*/
 .am-pagination li {
     float: none;
@@ -359,9 +391,6 @@ dl#select3 .dd-conent {
     }
 
     .select, .sort {
-        padding: 5px 10px;
-        box-shadow: 0px 0px 2px #999;
-        margin-top: 5px;
         background: #fff;
     }
 
@@ -509,7 +538,7 @@ dl#select3 .dd-conent {
     .limit p.title, .i-pic.check p.title {
         padding: 0px 10px;
         overflow: hidden;
-        height: 36px;
+        height: 18px;
         line-height: 18px;
     }
 
@@ -554,7 +583,7 @@ dl#select3 .dd-conent {
 
     .search-content {
         float: left;
-        width: 80%;
+        width: 100%;
     }
 
     .search-side {

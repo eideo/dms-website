@@ -1300,14 +1300,14 @@ dt + dd {
     .slideall {
         margin: 0px auto;
         max-width: 1000px;
-        padding-top: 45px;
+        padding-top: 50px;
         height: 415px;
     }
 
     .am-container {
         padding-left: 0rem;
         padding-right: 0rem;
-        max-width: s 1000px;
+        max-width:1000px;
     }
 
     .am-g-fixed {
@@ -3157,4 +3157,51 @@ dt + dd {
     .floodThree .text-four.list:hover img, .floodFour .text-one.list:hover img {
         margin-right: -105px;
     }
+}
+.pd10{
+    padding:10px
+}
+.l_price{float:left}
+.fl{float: left}
+.fr{float: right}
+.price_box{
+    width: 289px;
+    float: left;
+    padding: 20px;
+    box-shadow: 1px 1px 10px #eee;
+    margin-top:10px;
+    margin-left:10px;
+}
+.price_box:hover{
+    box-shadow: 1px 1px 10px #ddd;
+}
+.price_box .name{
+    padding:12px 0;
+}
+.price_box .price strong{
+    font-size: 24px;
+    color: #72b905;
+}
+.price_box .price .trade-vip{
+    font-size: 14px;
+    color: #aaa;
+}
+.price_box .wrap-left{
+    float:right;
+    margin-top: -26px;
+    text-align: right;
+}
+.goumai{}
+.goumai button{
+    float: right;
+    padding: 2px 10px;
+    background: #fff;
+    border:1px solid #eee;
+    border-radius:3px;
+    margin-left:10px;
+    margin-top: 10px;
+}
+.goumai button:hover{
+    background:#72b905;
+    color:#fff;
 }

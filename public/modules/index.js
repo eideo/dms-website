@@ -43,4 +43,40 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', function($sc
     $scope.goSearch = function(){
         window.location.href = "/search.html?keyword=" + $scope.queryParams.keyword;
     }
+
+    $scope.getQiangGouProducts = function () {
+        ProductAPI.query({
+            limit: 8,
+            offset: 1,
+            labels: ["xianShiQiangGou"]
+        }, function (data) {
+            $scope.qiangGouProducts = data.data;
+        });
+    };
+    $scope.getXinPinProducts = function () {
+        ProductAPI.query({
+            limit: 8,
+            offset: 1,
+            labels: ["xinPinChangXian"]
+        }, function (data) {
+            $scope.xinPinProducts = data.data;
+        });
+    };
+    $scope.getTuiJianProducts = function () {
+        ProductAPI.query({
+            limit: 8,
+            offset: 1,
+            labels: ["reMaiTuiJian"]
+        }, function (data) {
+            $scope.tuiJianProducts = data.data;
+        });
+    };
+    var init = function () {
+        //$scope.getCurrentLocation();
+        $scope.getQiangGouProducts();
+        $scope.getXinPinProducts();
+        $scope.getTuiJianProducts();
+        //$scope.getLocalAddress();
+    };
+    init();
 }]);
