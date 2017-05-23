@@ -20,7 +20,6 @@ router.get('/login', function(req, res, next) {
     if(data && data.status == 200){
       req.session.user = data.username;
       var cookies = resp['headers']['set-cookie'];
-      console.log(cookies);
       for (var i = 0; i < cookies.length; i++) {
         res.setHeader('set-cookie', cookies);
       }

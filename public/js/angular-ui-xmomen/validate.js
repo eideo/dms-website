@@ -7,10 +7,17 @@ angular.module('xmomen.validate', [])
     errorClass:"error",
     focusInvalid: false, //当为false时，验证无效时，没有焦点响应
     onkeyup: false,
-    errorPlacement: function(error, element) { //指定错误信息位置
-        var msg = error[0].innerHTML;
-        layer.alert(msg);
-    }
+    //errorPlacement: function(error, element) { //指定错误信息位置
+    //    var msg = error[0].innerHTML;
+    //    layer.alert(msg);
+    //},
+    showErrors: function(errorMap, errorList) {
+        if(errorList && errorList.length > 0) {
+            layer.alert(errorList[0].message);
+        }
+    },
+    /* 失去焦点时不验证 */
+    onfocusout: false
 })
 .factory("$ugValidateProvider", function () {
     return {
@@ -19,7 +26,6 @@ angular.module('xmomen.validate', [])
         },
         addMethod: function (name, func, errorText) {
             $.validator.addMethod(name, func, errorText);
-
         }
     }
 })

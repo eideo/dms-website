@@ -1,45 +1,44 @@
 /**
  * Created by tanxinzheng on 17/5/8.
  */
-$(document).ready(function() {
-    $("#register").click(function(){
-        $.ajax({
-            type: "POST",
-            processData:false,
-            data: JSON.stringify({
-                phoneNumber:$("#phoneNumber").val(),
-                password:$("#password").val(),
-                email:$("#email").val()
-            }),
-            dataType: "json",
-            contentType:"application/json",
-            url:"/api/member/register",
-            success: function(data){
-                console.log(data);
-            },
-            error: function(data){
-                console.log(data);
+app.controller('registerCtrl',
+    ['$scope', '$http', 'AppAPI', '$UrlUtils', 'MemberAPI', '$interval', '$dialog',
+    function($scope, $http, AppAPI, $UrlUtils, MemberAPI, $interval, $dialog){
+        $scope.user = {};
+        $scope.tips = {
+            message:"获取验证码",
+            disabled:false
+        };
+        $scope.sendValidCode = function(){
+            if(!$scope.user.phoneNumber){
+                $dialog.alert("请输入手机号码");
+                return;
             }
-        });
-    });
-
-    $("#register2").click(function(){
-        $.ajax({
-            type: "POST",
-            processData:false,
-            data: JSON.stringify({
-                phoneNumber:$("#phoneNumber").val(),
-                password:$("#phonePassword").val()
-            }),
-            dataType: "json",
-            contentType:"application/json",
-            url:"/api/member/register",
-            success: function(data){
-                console.log(data);
-            },
-            error: function(data){
-                console.log(data);
+            MemberAPI.getCode({
+                phone: $scope.user.phoneNumber
+            }, function(data){
+                var i = 60;
+                var instead = $interval(function(){
+                    if(i <= 60 && i > 0){
+                        $scope.tips.message = i + "秒后重新获取";
+                        $scope.tips.disabled = true;
+                    }else{
+                        $interval.cancel(instead);
+                        $scope.tips.message = "获取验证码";
+                        $scope.tips.disabled = false;
+                    }
+                    i--;
+                }, 1000);
+            });
+        };
+        $scope.registerForm = {};
+        $scope.register = function(){
+            if($scope.registerForm.validator.form()){
+                MemberAPI.register($scope.user, function(data){
+                    $dialog.alert("注册成功");
+                    window.location.href = "/login";
+                })
             }
-        });
-    });
-});
+        }
+    }
+]);

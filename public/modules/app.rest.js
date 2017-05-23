@@ -31,6 +31,14 @@ angular.module('app.rest', [
         },
         getAccount:{
             method:"GET", url:"/api/member/account", isArray:false
+        },
+        getCode: {
+            method:"GET", url:"/api/member/phonecode", isArray:false, params:{
+                phone:"@phone"
+            }
+        },
+        register:{
+            method:"POST", url:"/api/member/register"
         }
     });
 }]).factory("BindAPI", ["Resource", function (Resource) {
