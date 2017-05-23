@@ -43,17 +43,17 @@
 			<div class="search-content">
 				<div class="clear"></div>
 
-				<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-4 boxes">
+				<ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 boxes">
 					<li ng-repeat="item in products" class="goods">
 						<div class="i-pic limit">
 							<div class="wl">
 								<img src="{{item.picUrl}}" />
-								<p class="title fl" ng-bind="item.itemName"></p>
-								<p class="price fl">
+								<p class="title" ng-bind="item.itemName"></p>
+								<p class="price">
 									<strong ng-bind="item.sellPrice | currency:'￥'"></strong>
 								</p>
-								<p class="number fl">
-									销量<span ng-bind="item.sellNum"></span>100
+								<p class="number fr font12">
+									销量<span ng-bind="item.sellNum" class="font12"></span>
 								</p>
 							</div>
 							<ul class="goumai">
@@ -80,7 +80,7 @@
 </div>
 <!--引导 -->
 <div class="navCir">
-	<li><a href="home2.html"><i class="am-icon-home "></i>首页</a></li>
+	<li><a href="/"><i class="am-icon-home "></i>首页</a></li>
 	<li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
 	<li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
 	<li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>
@@ -88,7 +88,7 @@
 <script>
 	window.jQuery || document.write('<script src="basic/js/jquery-1.9.min.js"><\/script>');
 </script>
-<script type="text/javascript" src="../basic/js/quick_links.js"></script>
+<script type="text/javascript" src="/basic/js/quick_links.js"></script>
 
 <div class="theme-popover-mask"></div>
 <% include  ../template/footer.html %>

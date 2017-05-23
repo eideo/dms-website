@@ -3165,12 +3165,15 @@ dt + dd {
 .fl{float: left}
 .fr{float: right}
 .price_box{
-    width: 289px;
+    width: 217px;
     float: left;
     padding: 20px;
     box-shadow: 1px 1px 10px #eee;
     margin-top:10px;
     margin-left:10px;
+}
+.price_box img{
+    height:142px ;
 }
 .price_box:hover{
     box-shadow: 1px 1px 10px #ddd;

@@ -3,7 +3,7 @@
  */
 var config = {
     development:{
-        apiHost:"localhost:8700"
+        apiHost:"system.1g3h.com"
     },
     production:{
         apiHost:"system.1g3h.com"

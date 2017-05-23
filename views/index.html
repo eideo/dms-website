@@ -23,59 +23,58 @@
   </div>
 </div>
 
-    <div class="bannerTwo">
-      <!--轮播 -->
-      <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
-        <ul class="am-slides">
-          <li class="banner1"><a href="/introduction.html"><img src="/images/ad5.jpg" /></a></li>
-          <li class="banner2"><a><img src="/images/ad6.jpg" /></a></li>
-          <li class="banner3"><a><img src="/images/ad7.jpg" /></a></li>
-        </ul>
-      </div>
-      <div class="clear"></div>
-    </div>
-    <!--导航 -->
-    <script type="text/javascript">
-      (function() {
-        $('.am-slider').flexslider();
-      });
-      $(document).ready(function() {
-        $("li").hover(function() {
-          $(".category-content .category-list li.first .menu-in").css("display", "none");
-          $(".category-content .category-list li.first").removeClass("hover");
-          $(this).addClass("hover");
-          $(this).children("div.menu-in").css("display", "block")
-        }, function() {
-          $(this).removeClass("hover")
-          $(this).children("div.menu-in").css("display", "none")
-        });
-      })
-    </script>
-    <!--小导航 -->
-    <div class="am-g am-g-fixed smallnav">
-      <div class="am-u-sm-3">
-        <a href="/sort.html"><img src="/images/navsmall.jpg" />
-          <div class="title">商品分类</div>
-        </a>
-      </div>
-      <div class="am-u-sm-3">
-        <a href="#"><img src="/images/huismall.jpg" />
-          <div class="title">大聚惠</div>
-        </a>
-      </div>
-      <div class="am-u-sm-3">
-        <a href="#"><img src="/images/mansmall.jpg" />
-          <div class="title">个人中心</div>
-        </a>
-      </div>
-      <div class="am-u-sm-3">
-        <a href="#"><img src="/images/moneysmall.jpg" />
-          <div class="title">投资理财</div>
-        </a>
-      </div>
-    </div>
-    <div class="clear"></div>
+<div class="bannerTwo">
+  <!--轮播 -->
+  <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
+    <ul class="am-slides">
+      <li class="banner1"><a href="/introduction.html"><img src="/images/ad5.jpg" /></a></li>
+      <li class="banner2"><a><img src="/images/ad6.jpg" /></a></li>
+      <li class="banner3"><a><img src="/images/ad7.jpg" /></a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
 </div>
+<!--导航 -->
+<script type="text/javascript">
+  (function() {
+    $('.am-slider').flexslider();
+  });
+  $(document).ready(function() {
+    $("li").hover(function() {
+      $(".category-content .category-list li.first .menu-in").css("display", "none");
+      $(".category-content .category-list li.first").removeClass("hover");
+      $(this).addClass("hover");
+      $(this).children("div.menu-in").css("display", "block")
+    }, function() {
+      $(this).removeClass("hover")
+      $(this).children("div.menu-in").css("display", "none")
+    });
+  })
+</script>
+<!--小导航 -->
+<div class="am-g am-g-fixed smallnav">
+  <div class="am-u-sm-3">
+    <a href="/sort.html"><img src="/images/navsmall.jpg" />
+      <div class="title">商品分类</div>
+    </a>
+  </div>
+  <div class="am-u-sm-3">
+    <a href="#"><img src="/images/huismall.jpg" />
+      <div class="title">大聚惠</div>
+    </a>
+  </div>
+  <div class="am-u-sm-3">
+    <a href="#"><img src="/images/mansmall.jpg" />
+      <div class="title">个人中心</div>
+    </a>
+  </div>
+  <div class="am-u-sm-3">
+    <a href="#"><img src="/images/moneysmall.jpg" />
+      <div class="title">投资理财</div>
+    </a>
+  </div>
+</div>
+<div class="clear"></div>
 <script type="text/javascript">
   if ($(window).width() < 640) {
     function autoScroll(obj) {
@@ -92,7 +91,6 @@
     })
   }
 </script>
-</div>
 
 
 <div class="shopMainbg" ng-controller="indexCtrl">
@@ -115,25 +113,27 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in qiangGouProducts" class="price_box">
-          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
-          <div>
-            <div class="name">
-              <b class="title" ng-bind="item.itemName"></b>
-            </div>
-            <p class="price">
-              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-            </p>
-            <p class="wrap-left">
+          <a href="">
+            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+            <div>
+              <div class="name">
+                <b class="title" ng-bind="item.itemName"></b>
+              </div>
+              <p class="price">
+                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+              </p>
+              <p class="wrap-left">
                 <span class="number fr">
                   销量<span ng-bind="item.sellNum"></span>
                 </span>
-            </p>
-            <div class="goumai">
-              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-              <button type="button" class="goods_ipt-add">立即购买</button>
+              </p>
+              <div class="goumai">
+                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                <button type="button" class="goods_ipt-add">立即购买</button>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <div class="clear "></div>
       </div>
@@ -148,25 +148,27 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in xinPinProducts" class="price_box">
-          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
-          <div>
-            <div class="name">
-              <b class="title" ng-bind="item.itemName"></b>
-            </div>
-            <p class="price">
-              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-            </p>
-            <p class="wrap-left">
+          <a href="/introduction.html">
+            <img ng-src="{{item.picUrl}}" style="width:100%"/>
+            <div>
+              <div class="name">
+                <b class="title" ng-bind="item.itemName"></b>
+              </div>
+              <p class="price">
+                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+              </p>
+              <p class="wrap-left">
                 <span class="number fr">
                   销量<span ng-bind="item.sellNum"></span>
                 </span>
-            </p>
-            <div class="goumai">
-              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-              <button type="button" class="goods_ipt-add">立即购买</button>
+              </p>
+              <div class="goumai">
+                <button type="button" class="goods_ipt-add">立即购买</button>
+                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <div class="clear "></div>
       </div>
@@ -181,25 +183,27 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in tuiJianProducts" class="price_box">
-          <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
-          <div>
-            <div class="name">
-              <b class="title" ng-bind="item.itemName"></b>
-            </div>
-            <p class="price">
-              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-            </p>
-            <p class="wrap-left">
+          <a href="/introduction.html">
+            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+            <div>
+              <div class="name">
+                <b class="title" ng-bind="item.itemName"></b>
+              </div>
+              <p class="price">
+                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+              </p>
+              <p class="wrap-left">
                 <span class="number fr">
                   销量<span ng-bind="item.sellNum"></span>
                 </span>
-            </p>
-            <div class="goumai">
-              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-              <button type="button" class="goods_ipt-add">立即购买</button>
+              </p>
+              <div class="goumai">
+                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                <button type="button" class="goods_ipt-add">立即购买</button>
+              </div>
             </div>
-          </div>
+          </a>
         </li>
         <div class="clear "></div>
       </div>

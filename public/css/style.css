@@ -693,7 +693,7 @@ li.am-comment {
     .clearfixRight {
         float: left;
         width: 55%;
-        min-height: 350px;
+        min-height: 250px;
     }
 
     .scoll {
