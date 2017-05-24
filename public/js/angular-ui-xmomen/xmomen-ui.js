@@ -1,6 +1,6 @@
 angular.module("xmomen.ui",[
-    "xmomen.validate"
-    //pagination.name,
+    "xmomen.validate",
+    "xmomen.pagination"
     //uiDirective.name,
     //dialog.name,
     //modal_draggable.name,
