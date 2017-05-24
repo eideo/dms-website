@@ -66,20 +66,19 @@ app.use('/api', proxy(proxyHost, {
   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
     // you can update headers
     proxyReqOpts.headers['X-Requested-With'] = 'XMLHttpRequest';
+    proxyReqOpts.headers['Content-Type'] = 'application/json';
     //proxyReqOpts.headers['sid'] = srcReq['sessionId'];
     // you can change the method
     return proxyReqOpts;
+  },
+  userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    //if(proxyResData && proxyRes){
+    //  data = JSON.parse(proxyResData.toString('utf8'));
+    //  return JSON.stringify(data);
+    //}
+    return proxyResData;
   }
-  //userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
-  //  if(proxyResData && proxyRes){
-  //    data = JSON.parse(proxyResData.toString('utf8'));
-  //    return JSON.stringify(data);
-  //  }
-  //  return proxyResData;
-  //}
 }));
-//var apiProxy = proxy('/api', { target: 'http://localhost:8700/',changeOrigin: true });//将服务器代理到localhost:8080端口上[本地服务器为localhost:3000]
-//app.use('/api/*', apiProxy);//api子目录下的都是用代理
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -3,6 +3,8 @@
  */
 var app = angular.module('dmsApp', [
     'ngResource',
+    'ngCookies',
+    'LocalStorageModule',
     'app.rest',
     'xmomen.ui'
 ]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {
@@ -19,6 +21,18 @@ var app = angular.module('dmsApp', [
         var resource = $resource( '/api' + url, params, methods );
         return resource;
     };
+}]).factory('AuthService', ['$q', 'MemberAPI', function($q, MemberAPI){
+    return {
+        isLogin:function(){
+            var defer = $q.defer();
+            MemberAPI.getAccount({}).$promise.then(function(data){
+                defer.resolve(true);
+            }, function(){
+                defer.reject(false);
+            });
+            return defer.promise;
+        }
+    }
 }]).factory('$UrlUtils', [function(){
     var getParams = function(name){
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
