@@ -45,10 +45,13 @@ p {
 img {
     width: 100%;
 }
-
+.font12{
+    font-size: 12px;
+}
 .price {
     color: #e4393c;
     font-weight: 600;
+    padding: 0 10px;
 }
 
 .theme-popover {
@@ -285,8 +288,9 @@ dl#select3 .dd-conent {
     cursor: pointer;
 }
 .i-pic.limit img{
-    height:201px;
+    height:157px;
 }
+.title{margin-top:10px}
 .number.fl {
     position: absolute;
     top: 234px;
@@ -314,14 +318,10 @@ dl#select3 .dd-conent {
     width:100%;
     float:left;
     height:40px;
-    background:#0a628f;
-    color:#fff;
-    transition: width 2s;
-    -moz-transition: width 2s; /* Firefox 4 */
-    -webkit-transition: width 2s; /* Safari 和 Chrome */
-    -o-transition: width 2s; /* Opera */
+    background: #55be59;
+    margin-top: 20px;
     }
-.goods_ipt-add{
+.goumai .goods_ipt-add{
     width:50%;
     float:left;
     display:block;
@@ -331,9 +331,11 @@ dl#select3 .dd-conent {
     border:0;
     color: #fff;
 }
-.goods_ipt-add:hover{
+.goumai .goods_ipt-add:hover{
     background:#41b145;
 }
+.goumai button{margin:0}
+.number{padding:0 10px;margin-top:-20px}
 /*分页*/
 .am-pagination li {
     float: none;
@@ -353,7 +355,7 @@ dl#select3 .dd-conent {
 
 .limit p.title, .i-pic.check p.title {
     padding: 0px 5px;
-    margin: 5px 0px;
+    margin: 25px 0 10px 0;
     overflow: hidden;
     height: 18px;
     line-height: 18px;
