@@ -40,9 +40,6 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartCookieA
     };
     $scope.getCategory();
     $scope.queryParams = {};
-    $scope.goSearch = function(){
-        window.location.href = "/search.html?keyword=" + $scope.queryParams.keyword;
-    }
 
     $scope.getQiangGouProducts = function () {
         ProductAPI.query({

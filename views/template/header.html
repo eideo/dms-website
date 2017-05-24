@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body ng-controller="dmsCtrl">
 <div class="hmtop">
     <!--顶部导航条 -->
     <div class="am-container header">
@@ -57,7 +57,7 @@
         <div class="search-bar pr">
             <a name="index_none_header_sysc" href="/search.html"></a>
             <form>
-                <input id="searchInput" ng-model="queryParams.keyword" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
+                <input id="searchInput" ng-model="searchParams.keyword" name="index_none_header_sysc" type="text" placeholder="搜索" autocomplete="off">
                 <input id="ai-topsearch" class="submit am-btn" value="搜索" ng-click="goSearch()" index="1" type="submit">
             </form>
         </div>

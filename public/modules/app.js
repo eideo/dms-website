@@ -46,15 +46,43 @@ var app = angular.module('dmsApp', [
             var str = url.substr(1);
             strs = str.split("&");
             for(var i = 0; i < strs.length; i ++) {
-                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+                theRequest[strs[i].split("=")[0]]=decodeURIComponent(strs[i].split("=")[1]);
             }
         }
         return theRequest;
     };
+    var toUrlString = function(obj){
+        var params = '';
+        angular.forEach(obj, function(val, key){
+            if(key){
+                if(params != ''){
+                    params = params + '&'
+                }
+                params = params + key + '=' + val;
+            }
+        });
+        return params;
+    };
+    var go = function(url, obj){
+        if(obj){
+            window.location.href = url + '?' + toUrlString(obj);
+        }else{
+            window.location.href = url;
+        }
+    };
     return {
         getParams:getParams,
-        getParameters : getParameters
+        getParameters : getParameters,
+        toUrlString:toUrlString,
+        go:go
     }
-}]).controller('dmsCtrl', ['$scope', function($scope){
-    //$scope.
+}]).controller('dmsCtrl', ['$scope', '$UrlUtils', function($scope, $UrlUtils){
+    $scope.searchParams = {};
+    $scope.goSearch = function(){
+        $UrlUtils.go("/search.html", $scope.searchParams);
+    };
+    var params = $UrlUtils.getParameters();
+    if(params && params.keyword){
+        $scope.searchParams.keyword = params.keyword;
+    }
 }]);

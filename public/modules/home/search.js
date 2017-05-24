@@ -1,8 +1,8 @@
 /**
  * Created by tanxinzheng on 17/5/8.
  */
-app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI',
-function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI){
+app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI', '$dialog',
+function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, $dialog){
     $scope.pageSetting = {
         category1:null,
         category2:null
@@ -79,7 +79,6 @@ function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI){
             itemId:item.id
         }, function(){
             $dialog.alert("商品［" +item.itemName+ "］已放入购物车");
-            pubSub.publish('changeCart');
         });
     };
     var init = function(){
