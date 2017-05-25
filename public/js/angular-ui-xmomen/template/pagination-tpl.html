@@ -1,0 +1,15 @@
+<div>
+    <ul class="am-pagination am-pagination-right">
+        <li ng-class="{'am-disabled':curPage==1}">
+            <a href="javascript:void(0)" ng-if="curPage==1">&laquo;</a>
+            <a href="javascript:void(0)" ng-if="curPage!=1" ng-click="skipPage(curPage-1)">&laquo;</a>
+        </li>
+        <li ng-class="{'am-active':curPage==page.num,disabled:page.isOmit}" ng-repeat="page in pageList">
+            <a href="javascript:void(0)" ng-click="skipPage(page.num)"  ng-show="!page.isOmit" ng-bind="page.num"></a>
+        </li>
+        <li ng-class="{next:curPage!=pages,'am-disabled':curPage==pages}">
+            <a href="javascript:void(0)" ng-if="curPage!=pages" ng-click="skipPage(curPage+1)">&raquo;</a>
+            <a href="javascript:void(0)" ng-if="curPage==pages">&raquo;</a>
+        </li>
+    </ul>
+</div>

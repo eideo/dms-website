@@ -2,8 +2,7 @@
  * Created by tanxinzheng on 17/5/8.
  */
 app.controller('loginCtrl', ['$scope', '$http', 'AppAPI', function($scope, $http, AppAPI){
-    $scope.user = {
-    };
+    $scope.user = {};
     $scope.login = function(){
         var params = {
             username:$scope.user.username,

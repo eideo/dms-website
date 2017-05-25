@@ -112,28 +112,29 @@
       </div>
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
+
         <li ng-repeat="item in qiangGouProducts" class="price_box">
-          <a href="{id:item.id}">
-            <img ng-src="{{item.picUrl}}" style="width:100%" />
-            <div>
-              <div class="name">
-                <b class="title" ng-bind="item.itemName"></b>
-              </div>
-              <p class="price">
-                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-              </p>
-              <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
-              </p>
-              <div class="goumai">
-                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
-                <button type="button" class="goods_ipt-add">立即购买</button>
-              </div>
-            </div>
+          <a href="/introduction.html?productId={{item.id}}">
+            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
           </a>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
+            </div>
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+                <span class="number fr">
+                  销量:<span ng-bind="item.sellNum"></span>
+                </span>
+            </p>
+          </div>
+          <div class="goumai">
+            <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+            <button type="button" class="goods_ipt-add" ng-click="buy(item)">立即购买</button>
+          </div>
         </li>
         <div class="clear "></div>
       </div>
@@ -148,27 +149,27 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in xinPinProducts" class="price_box">
-          <a href="/introduction.html{id:item.id}">
+          <a href="/introduction.html?productId={{item.id}}">
             <img ng-src="{{item.picUrl}}" style="width:100%"/>
-            <div>
-              <div class="name">
-                <b class="title" ng-bind="item.itemName"></b>
-              </div>
-              <p class="price">
-                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-              </p>
-              <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
-              </p>
-              <div class="goumai">
-                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
-                <button type="button" class="goods_ipt-add">立即购买</button>
-              </div>
-            </div>
           </a>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
+            </div>
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+              <span class="number fr">
+                销量:<span ng-bind="item.sellNum"></span>
+              </span>
+          </p>
+          </div>
+          <div class="goumai">
+              <button type="button" class="goods_ipt-add"  ng-click="buy(item)">立即购买</button>
+              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+          </div>
         </li>
         <div class="clear "></div>
       </div>
@@ -183,40 +184,28 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in tuiJianProducts" class="price_box">
-          <a href="/introduction.html">
-            <img ng-src="{{item.picUrl}}" style="width:100%"/>
-            <div>
-              <div class="name">
-                <b class="title" ng-bind="item.itemName"></b>
-              </div>
-              <p class="price">
-                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-              </p>
-              <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
-              </p>
-              <div class="goumai">
-                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
-                <button type="button" class="goods_ipt-add">立即购买</button>
-              </div>
-            </div>
+          <a href="/introduction.html?productId={{item.id}}">
+            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
           </a>
+          <div>
+            <div class="name">
+              <b class="title" ng-bind="item.itemName"></b>
+            </div>
+            <p class="price">
+              <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+              <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+            </p>
+            <p class="wrap-left">
+              <span class="number fr">
+                销量:<span ng-bind="item.sellNum"></span>
+              </span>
+            </p>
+            <div class="goumai">
+              <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+              <button type="button" class="goods_ipt-add" ng-click="buy(item)">立即购买</button>
+            </div>
+          </div>
         </li>
         <div class="clear "></div>
       </div>
-
-</div>
-
-</div>
-
-<!--引导 -->
-<ul class="navCir">
-  <li class="active"><a href="home.html"><i class="am-icon-home "></i>首页</a></li>
-  <li><a href="sort.html"><i class="am-icon-list"></i>分类</a></li>
-  <li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
-  <li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>
-</ul>
-  <% include  template/footer.html %>
+<% include  template/footer.html %>

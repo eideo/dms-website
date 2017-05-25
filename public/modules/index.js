@@ -1,7 +1,7 @@
 /**
  * Created by tanxinzheng on 17/5/9.
  */
-app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', function($scope, ProductAPI, CategoryAPI){
+app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartAPI', '$dialog', 'AuthService', '$UrlUtils', function($scope, ProductAPI, CategoryAPI, CartAPI, $dialog, AuthService, $UrlUtils){
     $scope.queryParams = {};
     $scope.getProducts = function(){
         var labels = [];
@@ -40,9 +40,6 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', function($sc
     };
     $scope.getCategory();
     $scope.queryParams = {};
-    $scope.goSearch = function(){
-        window.location.href = "/search.html?keyword=" + $scope.queryParams.keyword;
-    }
 
     $scope.getQiangGouProducts = function () {
         ProductAPI.query({
@@ -70,6 +67,26 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', function($sc
         }, function (data) {
             $scope.tuiJianProducts = data.data;
         });
+    };
+    $scope.pushCarts = function(item){
+        AuthService.isLogin().then(function(){
+            if(!item.stockNum || !(item.stockNum >= 1)){
+                $dialog.alert("该商品库存不足");
+                return;
+            }
+            CartAPI.create({
+                itemId:item.id
+            }, function(){
+                $dialog.alert("商品［" +item.itemName+ "］已放入购物车");
+            });
+        })
+    };
+    $scope.buy = function(item){
+        AuthService.isLogin().then(function(){
+            $UrlUtils.go('/member/pay.html', {productId:item.id});
+        }, function(data){
+
+        })
     };
     var init = function () {
         //$scope.getCurrentLocation();

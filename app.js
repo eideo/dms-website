@@ -36,8 +36,8 @@ console.log("当前环境:", env);
 //app.set('trust proxy', '127.0.0.1');
 //on('proxyReq', function(proxyReq){ proxyReq.setHeader('cookie', 'sessionid=' + cookieSnippedValue)
 app.use(session({
-  resave: false, // don't save session if unmodified
-  saveUninitialized: false, // don't create session until something stored
+  resave: true, // don't save session if unmodified
+  saveUninitialized: true, // don't create session until something stored
   secret: 'dms'
 }));
 app.use(function (req, res, next) {
@@ -52,34 +52,33 @@ var isLogin = function(req, res, next) {
   if (req.session && req.session.user){
     return next();
   }
-  res.redirect('/');
+  res.redirect('/login');
 };
 app.use('/', index);
 app.all('/member/**', isLogin);
 app.use('/member', users);
 
 //var proxyHost = "system.1g3h.com";
-//var proxyHost = "localhost:8700";
-var proxyHost = appConfig[env]['apiHost'];
+var proxyHost = "localhost:8700";
+//var proxyHost = appConfig[env]['apiHost'];
 console.log("代理服务器API地址：" + proxyHost);
 app.use('/api', proxy(proxyHost, {
   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
     // you can update headers
     proxyReqOpts.headers['X-Requested-With'] = 'XMLHttpRequest';
+    proxyReqOpts.headers['Content-Type'] = 'application/json';
     //proxyReqOpts.headers['sid'] = srcReq['sessionId'];
     // you can change the method
     return proxyReqOpts;
+  },
+  userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
+    //if(proxyResData && proxyRes){
+    //  data = JSON.parse(proxyResData.toString('utf8'));
+    //  return JSON.stringify(data);
+    //}
+    return proxyResData;
   }
-  //userResDecorator: function(proxyRes, proxyResData, userReq, userRes) {
-  //  if(proxyResData && proxyRes){
-  //    data = JSON.parse(proxyResData.toString('utf8'));
-  //    return JSON.stringify(data);
-  //  }
-  //  return proxyResData;
-  //}
 }));
-//var apiProxy = proxy('/api', { target: 'http://localhost:8700/',changeOrigin: true });//将服务器代理到localhost:8080端口上[本地服务器为localhost:3000]
-//app.use('/api/*', apiProxy);//api子目录下的都是用代理
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

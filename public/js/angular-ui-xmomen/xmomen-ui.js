@@ -1,6 +1,7 @@
 angular.module("xmomen.ui",[
-    "xmomen.validate"
-    //pagination.name,
+    "xmomen.validate",
+    "xmomen.pagination",
+    "ui.xmomen.datetimepicker"
     //uiDirective.name,
     //dialog.name,
     //modal_draggable.name,
@@ -13,12 +14,12 @@ angular.module("xmomen.ui",[
             layer.alert(msg);
         },
         confirm: function(msg){
-            var deferred = $q.defer;
+            var deferred = $q.defer();
             layer.confirm(msg, {
-                btn: ['确定','取消'], //按钮
-                shade: false //不显示遮罩
-            }, function(){
-                deferred.resolve();
+                btn: ['确定','取消'] //按钮,
+            }, function(index){
+                layer.close(index);
+                deferred.resolve(true);
             }, function(){
                 deferred.reject();
             });
@@ -63,16 +64,17 @@ angular.module("xmomen.ui",[
                 $dialog.alert(response.data.message);
             }else if(response.status == 401){
                 //未找到用户
-                window.location.reload();
+                window.location.href = "/login";
             }else if(response.status == 500){
                 $dialog.alert("系统操作异常，请联系管理员。");
             }
             return $q.reject(response);
         }
     }
-}]).config(["$httpProvider", function($httpProvider){
+}]).config(["$httpProvider", "$qProvider", function($httpProvider, $qProvider){
     $httpProvider.interceptors.push('HttpInterceptor');
     $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+    $qProvider.errorOnUnhandledRejections(false);
 }]).directive('btnLoading', [function() {
     return {
         restrict: 'A',

@@ -12,6 +12,12 @@ router.get('/information.html', function(req, res, next) {
 router.get('/center', function(req, res, next) {
   res.render('person/user-index', { title: '个人中心' });
 });
+router.get('/pay.html', function(req, res, next) {
+  res.render('person/pay', { title: '订单支付' });
+});
+router.get('/shopcart.html', function(req, res, next) {
+  res.render('person/shopcart', { title: '购物车' });
+});
 router.get('/address.html', function(req, res, next) {
   res.render('person/address', { title: '地址管理' });
 });

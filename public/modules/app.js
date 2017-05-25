@@ -3,6 +3,8 @@
  */
 var app = angular.module('dmsApp', [
     'ngResource',
+    'ngCookies',
+    'LocalStorageModule',
     'app.rest',
     'xmomen.ui'
 ]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {
@@ -19,6 +21,19 @@ var app = angular.module('dmsApp', [
         var resource = $resource( '/api' + url, params, methods );
         return resource;
     };
+}]).factory('AuthService', ['$q', 'MemberAPI', '$UrlUtils', function($q, MemberAPI, $UrlUtils){
+    return {
+        isLogin:function(){
+            var defer = $q.defer();
+            MemberAPI.getAccount({}).$promise.then(function(data){
+                defer.resolve(true);
+            }, function(data){
+                $UrlUtils.go("/login");
+                defer.reject(false);
+            });
+            return defer.promise;
+        }
+    }
 }]).factory('$UrlUtils', [function(){
     var getParams = function(name){
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -32,15 +47,43 @@ var app = angular.module('dmsApp', [
             var str = url.substr(1);
             strs = str.split("&");
             for(var i = 0; i < strs.length; i ++) {
-                theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+                theRequest[strs[i].split("=")[0]]=decodeURIComponent(strs[i].split("=")[1]);
             }
         }
         return theRequest;
     };
+    var toUrlString = function(obj){
+        var params = '';
+        angular.forEach(obj, function(val, key){
+            if(key){
+                if(params != ''){
+                    params = params + '&'
+                }
+                params = params + key + '=' + val;
+            }
+        });
+        return params;
+    };
+    var go = function(url, obj){
+        if(obj){
+            window.location.href = url + '?' + toUrlString(obj);
+        }else{
+            window.location.href = url;
+        }
+    };
     return {
         getParams:getParams,
-        getParameters : getParameters
+        getParameters : getParameters,
+        toUrlString:toUrlString,
+        go:go
     }
-}]).controller('dmsCtrl', ['$scope', function($scope){
-    //$scope.
+}]).controller('dmsCtrl', ['$scope', '$UrlUtils', function($scope, $UrlUtils){
+    $scope.searchParams = {};
+    $scope.goSearch = function(){
+        $UrlUtils.go("/search.html", $scope.searchParams);
+    };
+    var params = $UrlUtils.getParameters();
+    if(params && params.keyword){
+        $scope.searchParams.keyword = params.keyword;
+    };
 }]);

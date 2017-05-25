@@ -21,17 +21,17 @@
 						<dl id="select2">
 							<dt class="am-badge am-round">种类</dt>
 							<div class="dd-conent">
-								<dd class="select-all" ng-class="{'selected': pageSetting.categoryTop.id == item.id}" ng-repeat="item in categorys">
+								<dd class="select-all" ng-class="{'selected': pageSetting.category1.id == item.id}" ng-repeat="item in categorys">
 									<a href="javascript:void(0)" ng-click="choseLevel(item)" ng-bind="item.name"></a>
 								</dd>
 							</div>
 						</dl>
 					</li>
-					<li class="select-list" ng-if="pageSetting.categoryTop.nodes">
+					<li class="select-list" ng-if="pageSetting.category1.nodes">
 						<dl id="select3">
 							<dt class="am-badge am-round">种类明细</dt>
 							<div class="dd-conent">
-								<dd class="select-all" ng-class="{'selected':pageSetting.category2.id == item.id}" ng-click="choseLevel2(item)" ng-repeat="item in pageSetting.categoryTop.nodes">
+								<dd class="select-all" ng-class="{'selected':pageSetting.category2.id == item.id}" ng-click="choseLevel2(item)" ng-repeat="item in pageSetting.category1.nodes">
 									<a  href="javascript:void(0)" ng-bind="item.name"></a>
 								</dd>
 							</div>
@@ -65,15 +65,16 @@
 				</ul>
 				<div class="clear"></div>
 				<!--分页 -->
-				<ul class="am-pagination am-pagination-right">
-					<li class="am-disabled"><a href="#">&laquo;</a></li>
-					<li class="am-active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">&raquo;</a></li>
-				</ul>
+				<uix-pagination page-info="pageInfo" load-event="getProducts" load-parameter="queryParams"></uix-pagination>
+				<!--<ul class="am-pagination am-pagination-right">-->
+					<!--<li class="am-disabled"><a href="#">&laquo;</a></li>-->
+					<!--<li class="am-active" ng-repeat="page in pageInfo"><a href="#" ng-bind="page.num"></a></li>-->
+					<!--&lt;!&ndash;<li><a href="#">2</a></li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li><a href="#">3</a></li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li><a href="#">4</a></li>&ndash;&gt;-->
+					<!--&lt;!&ndash;<li><a href="#">5</a></li>&ndash;&gt;-->
+					<!--<li><a href="#">&raquo;</a></li>-->
+				<!--</ul>-->
 			</div>
 		</div>
 	</div>

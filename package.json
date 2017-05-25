@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "set NODE_ENV=production && hotnode ./bin/www && node-inspector &",
-    "debug": "hotnode ./bin/www && node-inspector &"
+    "start": "hotnode --debug ./bin/www",
+    "debug": "hotnode --debug ./bin/www && node-inspector &"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-datetimepicker": "0.0.7",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "ejs": "~2.5.6",
