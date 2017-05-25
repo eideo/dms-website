@@ -1,184 +1,186 @@
 <% include  ../template/header.html %>
 
-		<link type="text/css" href="css/optstyle.css" rel="stylesheet" />
-		<link type="text/css" href="css/style.css" rel="stylesheet" />
+		<link type="text/css" href="/css/optstyle.css" rel="stylesheet" />
+		<link type="text/css" href="/css/style.css" rel="stylesheet" />
 
-		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="/js/list.js"></script>
+		<script type="text/javascript" src="/modules/home/introduction.js"></script>
 
 		<link href="/basic/css/demo.css" rel="stylesheet" type="text/css" />
 		<link href="/css/hmstyle.css" rel="stylesheet" type="text/css" />
+<div ng-controller="introductionCtrl">
+	<div class="listMain">
+		<ol class="am-breadcrumb am-breadcrumb-slash">
+			<li><a href="/">首页</a></li>
+			<li><a href="#">分类</a></li>
+			<li class="am-active">内容</li>
+		</ol>
+		<script type="text/javascript">
+			$(function() {});
+			$(window).load(function() {
+				$('.flexslider').flexslider({
+					animation: "slide",
+					start: function(slider) {
+						$('body').removeClass('loading');
+					}
+				});
+			});
+		</script>
+		<div class="scoll">
+			<section class="slider">
+				<div class="flexslider">
+					<ul class="slides">
+						<li ng-repeat="pic in product.picUrls">
+							<img src="{{pic}}" width="100%" />
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
 
-			<div class="listMain">
-				<ol class="am-breadcrumb am-breadcrumb-slash">
-					<li><a href="/">首页</a></li>
-					<li><a href="#">分类</a></li>
-					<li class="am-active">内容</li>
-				</ol>
-				<script type="text/javascript">
-					$(function() {});
-					$(window).load(function() {
-						$('.flexslider').flexslider({
-							animation: "slide",
-							start: function(slider) {
-								$('body').removeClass('loading');
-							}
-						});
-					});
-				</script>
-				<div class="scoll">
-					<section class="slider">
-						<div class="flexslider">
-							<ul class="slides">
-								<li ng-repeat="pic in product.picUrls">
-									<img src="{{pic}}" width="100%" />
-								</li>
-							</ul>
-						</div>
-					</section>
+		<!--放大镜-->
+
+		<div class="item-inform">
+			<div class="clearfixLeft" id="clearcontent">
+
+				<div class="box">
+					<ul class="tb-thumb" id="thumblist">
+						<li class="tb-selected" ng-repeat="pic in product.picUrls">
+							<div class="tb-pic tb-s40">
+								<img src="{{pic}}" width="100%" />
+							</div>
+						</li>
+					</ul>
 				</div>
 
-				<!--放大镜-->
+				<div class="clear"></div>
+			</div>
 
-				<div class="item-inform">
-					<div class="clearfixLeft" id="clearcontent">
+			<div class="clearfixRight">
 
-						<div class="box">
-							<ul class="tb-thumb" id="thumblist">
-								<li class="tb-selected" ng-repeat="pic in product.picUrls">
-									<div class="tb-pic tb-s40">
-										<img src="{{pic}}" width="100%" />
-									</div>
-								</li>
-							</ul>
-						</div>
+				<!--规格属性-->
+				<!--名称-->
+				<div class="tb-detail-hd">
+					<h1 ng-bind="product.itemName"></h1>
+				</div>
+				<div class="tb-detail-list">
+					<!--价格-->
+					<ul class="tb-detail-price">
+						<li class="price iteminfo_mktprice">
+							<dt>价格</dt>
+							<dd><span class="ft24" ng-bind="product.sellPrice | currency:'¥'"></span></dd>
+							<span class="tm-label">销量</span><span class="tm-count">1015</span>
+						</li>
+					</ul>
 
-						<div class="clear"></div>
-					</div>
-
-					<div class="clearfixRight">
-
-						<!--规格属性-->
-						<!--名称-->
-						<div class="tb-detail-hd">
-							<h1 ng-bind="product.itemName"></h1>
-						</div>
-						<div class="tb-detail-list">
-							<!--价格-->
-							<ul class="tb-detail-price">
-								<li class="price iteminfo_mktprice">
-									<dt>价格</dt>
-									<dd><span class="ft24" ng-bind="product.sellPrice | currency:'¥'"></span></dd>
-									<span class="tm-label">销量</span><span class="tm-count">1015</span>
-								</li>
-							</ul>
-
-							<!--地址-->
-							<dl class="iteminfo_parameter freight">
-								<dt>配送至</dt>
-								<div class="iteminfo_freprice">
-									<div class="am-form-content address">
-										<select data-am-selected>
-											<option value="a">浙江省</option>
-											<option value="b">湖北省</option>
-										</select>
-										<select data-am-selected>
-											<option value="a">温州市</option>
-											<option value="b">武汉市</option>
-										</select>
-										<select data-am-selected>
-											<option value="a">瑞安区</option>
-											<option value="b">洪山区</option>
-										</select>
-									</div>
-									<div class="pay-logis">
-										快递<b class="sys_item_freprice">10</b>元
-									</div>
-								</div>
-							</dl>
-							<div class="clear"></div>
-
-							<!--活动	-->
-							<div class="shopPromotion gold">
-								<div class="hot">
-									<dt class="tb-metatit">店铺优惠</dt>
-									<div class="gold-list">
-										<p>购物满2件打8折，满3件7折<span>点击领券<i class="am-icon-sort-down"></i></span></p>
-									</div>
-								</div>
-								<div class="clear"></div>
-								<div class="coupon">
-									<dt class="tb-metatit">优惠券</dt>
-									<div class="gold-list">
-										<ul>
-											<li>125减5</li>
-											<li>198减10</li>
-											<li>298减20</li>
-										</ul>
-									</div>
-								</div>
+					<!--地址-->
+					<dl class="iteminfo_parameter freight">
+						<dt>配送至</dt>
+						<div class="iteminfo_freprice">
+							<div class="am-form-content address">
+								<select data-am-selected>
+									<option value="a">浙江省</option>
+									<option value="b">湖北省</option>
+								</select>
+								<select data-am-selected>
+									<option value="a">温州市</option>
+									<option value="b">武汉市</option>
+								</select>
+								<select data-am-selected>
+									<option value="a">瑞安区</option>
+									<option value="b">洪山区</option>
+								</select>
+							</div>
+							<div class="pay-logis">
+								快递<b class="sys_item_freprice">10</b>元
 							</div>
 						</div>
-
-						<div class="pay">
-							<div class="pay-opt">
-							<a href="home.html"><span class="am-icon-home am-icon-fw">首页</span></a>
-							<a><span class="am-icon-heart am-icon-fw">收藏</span></a>
-
-							</div>
-							<li>
-								<div class="clearfix tb-btn tb-btn-buy theme-login">
-									<a id="LikBuy" title="点此按钮到下一步确认购买信息" href="pay.html">立即购买</a>
-								</div>
-							</li>
-							<li>
-								<div class="clearfix tb-btn tb-btn-basket theme-login">
-									<a id="LikBasket" title="加入购物车" href="shopcart.html"><i></i>加入购物车</a>
-								</div>
-							</li>
-						</div>
-
-					</div>
-
+					</dl>
 					<div class="clear"></div>
 
+					<!--活动	-->
+					<div class="shopPromotion gold">
+						<div class="hot">
+							<dt class="tb-metatit">店铺优惠</dt>
+							<div class="gold-list">
+								<p>购物满2件打8折，满3件7折<span>点击领券<i class="am-icon-sort-down"></i></span></p>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="coupon">
+							<dt class="tb-metatit">优惠券</dt>
+							<div class="gold-list">
+								<ul>
+									<li>125减5</li>
+									<li>198减10</li>
+									<li>298减20</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 
+				<div class="pay">
+					<div class="pay-opt">
+					<a href="home.html"><span class="am-icon-home am-icon-fw">首页</span></a>
+					<a><span class="am-icon-heart am-icon-fw">收藏</span></a>
 
-				<!-- introduce-->
-
-				<div class="introduce">
-					<div class="browse">
-					    <div class="mc">
-						     <ul style="opacity:0;width:20%">
-						     </ul>
-					    </div>
 					</div>
-					<div class="introduceMain">
-						<div class="am-tabs" data-am-tabs>
-							<ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs">
-								<li class="am-active">
-									<a href="#">
-										<span class="index-needs-dt-txt">宝贝详情</span></a>
-								</li>
-							</ul>
-
-							<div class="am-tabs-bd">
-
-								<div class="am-tab-panel am-fade am-in am-active">
-									<a class="item mt10 wl" ng-if="product.detailContent">
-										图文详情
-									</a>
-									<div ng-if="product.detailContent" class="goods-info" ng-bind-html="product.detailContent"></div>
-									<div class="clear"></div>
-								</div>
-							</div>
-
+					<li>
+						<div class="clearfix tb-btn tb-btn-buy theme-login">
+							<a id="LikBuy" title="点此按钮到下一步确认购买信息" href="pay.html">立即购买</a>
 						</div>
+					</li>
+					<li>
+						<div class="clearfix tb-btn tb-btn-basket theme-login">
+							<a id="LikBasket" title="加入购物车" href="shopcart.html"><i></i>加入购物车</a>
+						</div>
+					</li>
+				</div>
 
-						<div class="clear"></div>
+			</div>
 
-					</div>
+			<div class="clear"></div>
 
+		</div>
+
+
+		<!-- introduce-->
+
+		<div class="introduce">
+			<div class="browse">
+				<div class="mc">
+					 <ul style="opacity:0;width:20%">
+					 </ul>
 				</div>
 			</div>
-			<% include  ../template/footer.html %>
+			<div class="introduceMain">
+				<div class="am-tabs" data-am-tabs>
+					<ul class="am-avg-sm-3 am-tabs-nav am-nav am-nav-tabs">
+						<li class="am-active">
+							<a href="#">
+								<span class="index-needs-dt-txt">宝贝详情</span></a>
+						</li>
+					</ul>
+
+					<div class="am-tabs-bd">
+
+						<div class="am-tab-panel am-fade am-in am-active">
+							<a class="item mt10 wl" ng-if="product.detailContent">
+								图文详情
+							</a>
+							<div ng-if="product.detailContent" class="goods-info" ng-bind-html="product.detailContent"></div>
+							<div class="clear"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="clear"></div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<% include  ../template/footer.html %>
