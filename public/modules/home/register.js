@@ -39,6 +39,6 @@ app.controller('registerCtrl',
                     window.location.href = "/login";
                 })
             }
-        }
+        };
     }
 ]);

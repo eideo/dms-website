@@ -85,7 +85,7 @@ function($scope, $http, AppAPI, $UrlUtils, CartAPI, $dialog, ProductAPI, Address
             });
         }
         OrderAPI.create(order, function(data){
-            $state.go('order_detail', {id:data.id});
+            $UrlUtils.go('/member/orderinfo.html', {id:data.id});
         });
     };
     $scope.products = [];

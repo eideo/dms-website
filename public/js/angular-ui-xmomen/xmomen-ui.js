@@ -1,6 +1,7 @@
 angular.module("xmomen.ui",[
     "xmomen.validate",
-    "xmomen.pagination"
+    "xmomen.pagination",
+    "ui.xmomen.datetimepicker"
     //uiDirective.name,
     //dialog.name,
     //modal_draggable.name,

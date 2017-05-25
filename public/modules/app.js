@@ -85,5 +85,5 @@ var app = angular.module('dmsApp', [
     var params = $UrlUtils.getParameters();
     if(params && params.keyword){
         $scope.searchParams.keyword = params.keyword;
-    }
+    };
 }]);
