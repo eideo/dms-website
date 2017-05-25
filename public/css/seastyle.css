@@ -49,7 +49,7 @@ img {
     font-size: 12px;
 }
 .price {
-    color: #e4393c;
+    color: #64b204;
     font-weight: 600;
     padding: 0 10px;
 }
@@ -122,12 +122,12 @@ img {
 }
 
 .select a:hover {
-    color: #f60;
+    color: #64b204;
     background-color: #f3edc2
 }
 
 .select .selected a {
-    color: #F00;
+    color: #64b204;
     border: #999 solid 1px;
 }
 
@@ -170,7 +170,7 @@ li.select-result dt {
     margin-top: 4px;
     width: 35px;
     float: right;
-    color: #F00;
+    color: #64b204;
     cursor: pointer;
 }
 
@@ -199,7 +199,7 @@ li.select-result dt {
 }
 
 .sort li.first {
-    color: #F03726;
+    color: #64b204;
 }
 
 /*筛选条件*/
@@ -517,7 +517,7 @@ dl#select3 .dd-conent {
     }
 
     span.am-icon-th-list {
-        color: orangered;
+        color: #64b204;
         margin-right: 1px;
     }
 
@@ -603,7 +603,7 @@ dl#select3 .dd-conent {
         margin: 10px 0px;
         box-shadow: 0px 0px 2px #999;
         text-align: center;
-        color: #e4393c;
+        color: #64b204;
         font-size: 14px;
         background: #fff;
     }

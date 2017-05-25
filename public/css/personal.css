@@ -70,8 +70,15 @@ a:link, a:visited {
     padding: 0;
     margin: 0;
 }
+button{
 
-；
+
+    outline:none;
+
+
+}
+
+
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -647,6 +654,14 @@ hr {
         max-width: 1200px;
         margin: 0px auto;
     }
+    button{
+
+
+        outline:none;
+
+
+    }
+
 
     .mt-logo .mt-tblogo {
         width: 20%;
@@ -1046,7 +1061,7 @@ hr {
     .nav-cont li a {
         font-size: 16px;
         color: #333;
-        line-height: 36px;
+        line-height: 26px;
         margin-left: -1px;
         padding: 0 25px;
         text-decoration: none;
@@ -1688,14 +1703,17 @@ input.add, input.min {
     }
 
     .nav-cont li a {
-        font-size: 14px;
-        color: #333;
-        line-height: 36px;
-        margin-left: -1px;
-        padding: 0 55px;
-        text-decoration: none;
-        display: inline-block;
-        vertical-align: middle;
+         font-size: 14px;
+         color: #333;
+         line-height: 26px;
+         margin-left: -1px;
+         padding: 0 55px;
+         text-decoration: none;
+         display: inline-block;
+         vertical-align: middle;
+     }
+    .nav-cont li a:hover {
+        background: none;
     }
 
     .nav-cont .nav-extra {

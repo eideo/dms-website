@@ -8,7 +8,7 @@ ul, li, ol {
     padding-left: 0rem;
     padding-right: 0rem;
 }
-
+.ml5{margin-left:5px}
 .am-thumbnails {
     margin-left: 0rem;
     margin-right: 0rem;
@@ -3201,7 +3201,6 @@ dt + dd {
     background: #fff;
     border:1px solid #eee;
     border-radius:3px;
-    margin-left:10px;
     margin-top: 10px;
 }
 .goumai button:hover{

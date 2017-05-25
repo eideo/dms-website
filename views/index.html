@@ -113,8 +113,8 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in qiangGouProducts" class="price_box">
-          <a href="">
-            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+          <a href="{id:item.id}">
+            <img ng-src="{{item.picUrl}}" style="width:100%" />
             <div>
               <div class="name">
                 <b class="title" ng-bind="item.itemName"></b>
@@ -129,7 +129,7 @@
                 </span>
               </p>
               <div class="goumai">
-                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
                 <button type="button" class="goods_ipt-add">立即购买</button>
               </div>
             </div>
@@ -148,7 +148,7 @@
 
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in xinPinProducts" class="price_box">
-          <a href="/introduction.html">
+          <a href="/introduction.html{id:item.id}">
             <img ng-src="{{item.picUrl}}" style="width:100%"/>
             <div>
               <div class="name">
@@ -164,8 +164,8 @@
                 </span>
               </p>
               <div class="goumai">
+                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
                 <button type="button" class="goods_ipt-add">立即购买</button>
-                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
               </div>
             </div>
           </a>
@@ -184,7 +184,7 @@
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in tuiJianProducts" class="price_box">
           <a href="/introduction.html">
-            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+            <img ng-src="{{item.picUrl}}" style="width:100%"/>
             <div>
               <div class="name">
                 <b class="title" ng-bind="item.itemName"></b>
@@ -199,7 +199,7 @@
                 </span>
               </p>
               <div class="goumai">
-                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                <button type="button" class="shopping-button fr ml5" ng-click="pushCarts(item)">加入购物车</button>
                 <button type="button" class="goods_ipt-add">立即购买</button>
               </div>
             </div>
@@ -207,7 +207,7 @@
         </li>
         <div class="clear "></div>
       </div>
-  <% include  template/footer.html %>
+
 </div>
 
 </div>
@@ -219,5 +219,4 @@
   <li><a href="shopcart.html"><i class="am-icon-shopping-basket"></i>购物车</a></li>
   <li><a href="../person/index.html"><i class="am-icon-user"></i>我的</a></li>
 </ul>
-
-
+  <% include  template/footer.html %>
