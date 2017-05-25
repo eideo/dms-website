@@ -42,22 +42,14 @@ router.get('/logout', function(req, res) {
   req.session.user = null;
   res.redirect('/login');
 });
-
-
 router.get('/register', function(req, res, next) {
   res.render('home/register', { title: '注册' });
 });
 router.get('/introduction.html', function(req, res, next) {
   res.render('home/introduction', { title: '商品信息' });
 });
-router.get('/pay.html', function(req, res, next) {
-  res.render('home/pay', { title: '订单支付' });
-});
 router.get('/search.html', function(req, res, next) {
   res.render('home/search', { title: '搜索' });
-});
-router.get('/shopcart.html', function(req, res, next) {
-  res.render('home/shopcart', { title: '购物车' });
 });
 router.get('/success.html', function(req, res, next) {
   res.render('home/success', { title: '个人中心' });

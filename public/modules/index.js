@@ -1,7 +1,7 @@
 /**
  * Created by tanxinzheng on 17/5/9.
  */
-app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartCookieAPI', '$dialog', 'AuthService', function($scope, ProductAPI, CategoryAPI, CartCookieAPI, $dialog, AuthService){
+app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartAPI', '$dialog', 'AuthService', '$UrlUtils', function($scope, ProductAPI, CategoryAPI, CartAPI, $dialog, AuthService, $UrlUtils){
     $scope.queryParams = {};
     $scope.getProducts = function(){
         var labels = [];
@@ -69,19 +69,23 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartCookieA
         });
     };
     $scope.pushCarts = function(item){
-        if(!item.stockNum || !(item.stockNum >= 1)){
-            $dialog.alert("该商品库存不足");
-            return;
-        }
-        CartCookieAPI.create(item, function(){
-            $dialog.alert("商品［" +item.itemName+ "］已放入购物车");
-        });
+        AuthService.isLogin().then(function(){
+            if(!item.stockNum || !(item.stockNum >= 1)){
+                $dialog.alert("该商品库存不足");
+                return;
+            }
+            CartAPI.create({
+                itemId:item.id
+            }, function(){
+                $dialog.alert("商品［" +item.itemName+ "］已放入购物车");
+            });
+        })
     };
     $scope.buy = function(item){
         AuthService.isLogin().then(function(){
-            console.log("login");
+            $UrlUtils.go('/member/pay.html', {productId:item.id});
         }, function(data){
-            console.log("not login");
+
         })
     };
     var init = function () {

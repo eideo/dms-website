@@ -1,7 +1,9 @@
 /**
  * Created by Jeng on 2015/12/17.
  */
-angular.module('xmomen.validate', [])
+angular.module('xmomen.validate', [
+
+])
 .constant("$ugValidateDefault", {
     errorElement: "div",
     errorClass:"error",
@@ -26,6 +28,20 @@ angular.module('xmomen.validate', [])
         },
         addMethod: function (name, func, errorText) {
             $.validator.addMethod(name, func, errorText);
+        },
+        addRule: function(key, rule){
+            this.addMethod(key, function(value, element){
+                var pattern = new RegExp(rule.rule);
+                if(value === false){
+                    return false;
+                }
+                if(value != ""){
+                    if(!pattern.test(value)){
+                        return false;
+                    }
+                }
+                return true;
+            }, rule.message);
         }
     }
 })
@@ -42,4 +58,9 @@ angular.module('xmomen.validate', [])
              angular.extend(scope.ugValidate, option);
          }
      };
- }]);
+ }]).run(['$ugValidateProvider', function($ugValidateProvider){
+    $ugValidateProvider.addRule('telephone', {
+        rule:/^(1)[0-9]{10}$/,
+        message:"请输入正确的手机号码"
+    });
+}]);

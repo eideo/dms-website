@@ -36,8 +36,8 @@ console.log("当前环境:", env);
 //app.set('trust proxy', '127.0.0.1');
 //on('proxyReq', function(proxyReq){ proxyReq.setHeader('cookie', 'sessionid=' + cookieSnippedValue)
 app.use(session({
-  resave: false, // don't save session if unmodified
-  saveUninitialized: false, // don't create session until something stored
+  resave: true, // don't save session if unmodified
+  saveUninitialized: true, // don't create session until something stored
   secret: 'dms'
 }));
 app.use(function (req, res, next) {
@@ -52,7 +52,7 @@ var isLogin = function(req, res, next) {
   if (req.session && req.session.user){
     return next();
   }
-  res.redirect('/');
+  res.redirect('/login');
 };
 app.use('/', index);
 app.all('/member/**', isLogin);

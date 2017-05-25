@@ -21,13 +21,14 @@ var app = angular.module('dmsApp', [
         var resource = $resource( '/api' + url, params, methods );
         return resource;
     };
-}]).factory('AuthService', ['$q', 'MemberAPI', function($q, MemberAPI){
+}]).factory('AuthService', ['$q', 'MemberAPI', '$UrlUtils', function($q, MemberAPI, $UrlUtils){
     return {
         isLogin:function(){
             var defer = $q.defer();
             MemberAPI.getAccount({}).$promise.then(function(data){
                 defer.resolve(true);
-            }, function(){
+            }, function(data){
+                $UrlUtils.go("/login");
                 defer.reject(false);
             });
             return defer.promise;
