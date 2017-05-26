@@ -14,8 +14,8 @@
     };
 }(jQuery));
 angular.module('ui.xmomen.datetimepicker', [
-"ng"
-]).directive('uixDatetimepicker',["$filter",  function($filter){
+    'ui.bootstrap'
+]).directive('uixDatetimepicker',['uibDateParser', "$filter",  function(dateParser, $filter){
     var dateFilter = $filter('date');
     return {
         require:'ngModel',
@@ -43,7 +43,7 @@ angular.module('ui.xmomen.datetimepicker', [
             }).addClass('date').attr("readonly", true);
 
             ctrl.$formatters.push(function (value) {
-                if (angular.isNumber(value) && config.format == 'yyyy-mm-dd') {
+                if (angular.isNumber(value)) {
                     return dateFilter(value, 'yyyy-MM-dd'); //format
                 }
                 return value;

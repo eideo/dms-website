@@ -6,7 +6,8 @@ var app = angular.module('dmsApp', [
     'ngCookies',
     'LocalStorageModule',
     'app.rest',
-    'xmomen.ui'
+    'xmomen.ui',
+    'ui.bootstrap'
 ]).factory('Resource', [ '$resource', '$injector', "$timeout", function( $resource , $injector, $timeout) {
     return function( url, params, methods ) {
 
