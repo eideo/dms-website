@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/login', function(req, res, next) {
   if(req.session && req.session.user){
-    res.redirect('/member/center');
+    res.redirect('/member/information.html');
     return;
   }
   res.render('home/login', { title: '登录', error:'' });
@@ -23,7 +23,7 @@ router.get('/login', function(req, res, next) {
       for (var i = 0; i < cookies.length; i++) {
         res.setHeader('set-cookie', cookies);
       }
-      res.redirect('/member/center');
+      res.redirect('/member/information.html');
     }else{
       res.render('home/login', {
         title: '登录',
