@@ -3,33 +3,33 @@
  */
 app.controller('orderCtrl', ['$scope', 'OrderAPI', '$dialog', function($scope, OrderAPI, $dialog){
     $scope.queryParams = {
-        timeType:1
+        timeType:1,
+        orderType:1
     };
     $scope.getOrders = function(){
-        if($scope.queryParams.timeType == 1){
-            //近一个月
-            $scope.queryParams.minOrderTime = new Date().getTime() - (31 * 24 * 3600000);
-            $scope.queryParams.maxOrderTime = new Date().getTime();
-        }else if($scope.queryParams.timeType == 2){
-            //近半年订单
-            $scope.queryParams.minOrderTime = new Date().getTime() - (180 * 24 * 3600000);
-            $scope.queryParams.maxOrderTime = new Date().getTime();
-        }else if($scope.queryParams.timeType == 3){
-            //半年前订单
-            $scope.queryParams.minOrderTime = null;
-            $scope.queryParams.maxOrderTime = new Date().getTime() - (180 * 24 * 3600000);
-        }
         OrderAPI.query({
-            status:$scope.queryParams.status,
-            maxOrderTime:$scope.queryParams.maxOrderTime,
-            minOrderTime:$scope.queryParams.minOrderTime
+            status:$scope.queryParams.status
         }, function(data){
             $scope.orders = data;
         })
     };
 
-    $scope.switchTime = function(type){
-        $scope.queryParams.timeType = type;
+    $scope.switchType = function(type){
+        $scope.queryParams.orderType = type;
+        $scope.queryParams.status = null;
+        if(type == 1){
+            //所有
+            $scope.queryParams.status = null;
+        }else if(type == 2){
+            //待付款
+            $scope.queryParams.status = 0;
+        }else if(type == 3){
+            //待收货
+            $scope.queryParams.status = 1;
+        }else if(type == 4){
+            //待评价
+            $scope.queryParams.status = 6;
+        }
         $scope.getOrders();
     };
     $scope.confirm = function(order){

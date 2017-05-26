@@ -88,7 +88,7 @@ function($scope, $http, AppAPI, $UrlUtils, CartAPI, $dialog, ProductAPI, Address
             $UrlUtils.go('/member/orderinfo.html', {id:data.id});
         });
     };
-    $scope.products = [];
+    $scope.order.products = [];
     $scope.getProduct = function(){
         if(!$scope.queryParams.productIds || $scope.queryParams.productIds.length <= 0){
             return;
@@ -98,9 +98,9 @@ function($scope, $http, AppAPI, $UrlUtils, CartAPI, $dialog, ProductAPI, Address
             offset:1,
             productIds:$scope.queryParams.productIds
         }, function(data){
-            $scope.products = data.data;
-            angular.forEach($scope.products, function(val, i){
-                $scope.products[i].itemQty = $scope.productParams[$scope.products[i].id];
+            $scope.order.products = data.data;
+            angular.forEach($scope.order.products, function(val, i){
+                $scope.order.products[i].itemQty = $scope.productParams[$scope.order.products[i].id];
             });
         })
     };
@@ -130,17 +130,17 @@ function($scope, $http, AppAPI, $UrlUtils, CartAPI, $dialog, ProductAPI, Address
     $scope.remove = function(index){
         $dialog.confirm('是否删除该商品').then(function(){
             CartAPI.create({
-                itemId:$scope.products[index].id,
+                itemId:$scope.order.products[index].id,
                 itemQty: 0
             });
-            $scope.products.splice(index, 1);
+            $scope.order.products.splice(index, 1);
             $dialog.msg('删除成功', {icon: 1});
         })
     };
     $scope.totalAmount = function(){
         var amount = 0;
-        for (var i = 0; i < $scope.products.length; i++) {
-            var obj = $scope.products[i];
+        for (var i = 0; i < $scope.order.products.length; i++) {
+            var obj = $scope.order.products[i];
             amount = amount + (obj.sellPrice * obj.itemQty);
         }
         return amount;
@@ -149,8 +149,8 @@ function($scope, $http, AppAPI, $UrlUtils, CartAPI, $dialog, ProductAPI, Address
         var choseProducts = [];
         var productIds = "";
         var productNums = "";
-        for (var i = 0; i < $scope.products.length; i++) {
-            var obj = $scope.products[i];
+        for (var i = 0; i < $scope.order.products.length; i++) {
+            var obj = $scope.order.products[i];
             if(obj.checked){
                 choseProducts.push(obj);
                 if(productIds == ""){

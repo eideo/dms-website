@@ -4,6 +4,7 @@
 var app = angular.module('dmsApp', [
     'ngResource',
     'ngCookies',
+    'ngSanitize',
     'LocalStorageModule',
     'app.rest',
     'xmomen.ui',
