@@ -5,16 +5,16 @@
   <div class="menu style-1">
     <ul class="menu">
       <li ng-repeat="item in categorys">
-        <a href="/search.html?categoryId={{item.id}}">
+        <a href="#">
           <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
         </a>
         <div class="mega-menu full-width">
           <div class="col-12">
             <h4>
-              <a href="/search.html?categoryId={{item.id}}" ng-bind="item.name"></a>
+              <a href="/search.html" ng-bind="item.name"></a>
             </h4>
             <ol>
-              <li ng-repeat="node in item.nodes"><a href="/search.html?categoryId={{item.id}}&nodeId={{node.id}}" ng-bind="node.name"></a></li>
+              <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
             </ol>
           </div>
         </div>
@@ -115,7 +115,7 @@
 
         <li ng-repeat="item in qiangGouProducts" class="price_box">
           <a href="/introduction.html?productId={{item.id}}">
-            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+            <img ng-src="{{item.picUrl}}" style="width:100%"/>
           </a>
           <div>
             <div class="name">
@@ -185,7 +185,7 @@
       <div class="am-g am-g-fixe` 2d floodSix pd10">
         <li ng-repeat="item in tuiJianProducts" class="price_box">
           <a href="/introduction.html?productId={{item.id}}">
-            <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
+            <img ng-src="{{item.picUrl}}" style="width:100%"/>
           </a>
           <div>
             <div class="name">

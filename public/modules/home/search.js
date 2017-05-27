@@ -1,8 +1,8 @@
 /**
  * Created by tanxinzheng on 17/5/8.
  */
-app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI', '$dialog',
-function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, $dialog){
+app.controller('searchCtrl', ['$scope', '$http', 'AppAPI', '$UrlUtils', 'CategoryAPI', 'ProductAPI', '$dialog','CartAPI','AuthService',
+function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, $dialog,CartAPI,AuthService){
     $scope.pageSetting = {
         category1:null,
         category2:null
@@ -80,6 +80,13 @@ function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, $dialog){
         }, function(){
             $dialog.alert("商品［" +item.itemName+ "］已放入购物车");
         });
+    };
+    $scope.buy = function(item){
+        AuthService.isLogin().then(function(){
+            $UrlUtils.go('/member/pay.html', {productId:item.id});
+        }, function(data){
+
+        })
     };
     var init = function(){
         $scope.queryParams = $UrlUtils.getParameters();
