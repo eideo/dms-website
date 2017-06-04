@@ -16,15 +16,25 @@ router.get('/login', function(req, res, next) {
   res.render('home/login', { title: '登录', error:'' });
 }).post('/login', function(req, res) {
   sign.login(req, function(resp){
-    var data = JSON.parse(resp.body);
+    var data;
+    if(resp && resp.body && resp.body != ''){
+      data = JSON.parse(resp.body);
+    }
     if(data && data.status == 200){
       req.session.user = data.username;
       var cookies = resp['headers']['set-cookie'];
-      for (var i = 0; i < cookies.length; i++) {
-        res.setHeader('set-cookie', cookies);
+      if(cookies && cookies.length > 0){
+        for (var i = 0; i < cookies.length; i++) {
+          res.setHeader('set-cookie', cookies);
+        }
       }
       res.redirect('/member/information.html');
     }else{
+      if(!data || !data.message){
+        data = {
+          message:''
+        }
+      }
       res.render('home/login', {
         title: '登录',
         error: data.message
@@ -40,7 +50,7 @@ router.get('/login', function(req, res, next) {
 
 router.get('/logout', function(req, res) {
   req.session.user = null;
-  res.redirect('/login');
+  res.redirect('/login', { title: '登录' });
 });
 router.get('/register', function(req, res, next) {
   res.render('home/register', { title: '注册' });

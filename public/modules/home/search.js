@@ -93,9 +93,6 @@ function($scope, $http, AppAPI, $UrlUtils, CategoryAPI, ProductAPI, $dialog,Cart
         if($scope.queryParams.categoryId){
             //$scope.queryParams.categoryId = params.type;
         }
-        if($scope.queryParams.label){
-            $scope.queryParams.label = params.label;
-        }
         $scope.getProducts();
         $scope.getCategory();
     };

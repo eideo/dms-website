@@ -233,10 +233,10 @@
     <div class="slideall" style="height: auto;">
         <div class="nav-cont">
             <ul>
-                <li class="index select"><a href="/">首页</a></li>
-                <li class="qc"><a href="#">热门抢购</a></li>
-                <li class="qc"><a href="#">新品尝鲜</a></li>
-                <li class="qc"><a href="#">热门推荐</a></li>
+                <li class="index" ng-class="{'select':headerSetting.label==''}"><a href="/">首页</a></li>
+                <li class="qc" ng-class="{'select':headerSetting.label=='xianShiQiangGou'}"><a href="/search.html?label=xianShiQiangGou">热门抢购</a></li>
+                <li class="qc" ng-class="{'select':headerSetting.label=='xinPinChangXian'}"><a href="/search.html?label=xinPinChangXian">新品尝鲜</a></li>
+                <li class="qc" ng-class="{'select':headerSetting.label=='reMaiTuiJian'}"><a href="/search.html?label=reMaiTuiJian">热门推荐</a></li>
             </ul>
         </div>
         <b class="line" style="margin-top:-5px"></b>

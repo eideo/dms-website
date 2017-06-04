@@ -2,11 +2,15 @@
  * Created by tanxinzheng on 17/5/14.
  */
 var config = {
+    apiKey:'development',
     development:{
-        apiHost:"system.1g3h.com"
+        apiHost:"http://localhost:8700"
     },
     production:{
-        apiHost:"system.1g3h.com"
+        apiHost:"http://www.1g3h.com"
+    },
+    getEnv: function(){
+        return this[this.apiKey];
     }
 };
 module.exports = config;

@@ -13,8 +13,8 @@ var ejs = require('ejs');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var appConfig = require('./app.config');
-
+var config = require('./app.config');
+var envConfig = config.getEnv();
 var app = express();
 
 // view engine setup
@@ -36,8 +36,8 @@ console.log("当前环境:", env);
 //app.set('trust proxy', '127.0.0.1');
 //on('proxyReq', function(proxyReq){ proxyReq.setHeader('cookie', 'sessionid=' + cookieSnippedValue)
 app.use(session({
-  resave: true, // don't save session if unmodified
-  saveUninitialized: true, // don't create session until something stored
+  resave: false, // don't save session if unmodified
+  saveUninitialized: false, // don't create session until something stored
   secret: 'dms'
 }));
 app.use(function (req, res, next) {
@@ -58,9 +58,9 @@ app.use('/', index);
 app.all('/member/**', isLogin);
 app.use('/member', users);
 
-var proxyHost = "www.1g3h.com";
+//var proxyHost = "system.1g3h.com";
 //var proxyHost = "localhost:8700";
-//var proxyHost = appConfig[env]['apiHost'];
+var proxyHost = envConfig.apiHost;
 console.log("代理服务器API地址：" + proxyHost);
 app.use('/api', proxy(proxyHost, {
   proxyReqOptDecorator: function(proxyReqOpts, srcReq) {
@@ -96,7 +96,8 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.json(err);
+  //res.json(err);
+  res.redirect('/');
 });
 
 module.exports = app;

@@ -81,6 +81,7 @@ var app = angular.module('dmsApp', [
     }
 }]).controller('dmsCtrl', ['$scope', '$UrlUtils', function($scope, $UrlUtils){
     $scope.searchParams = {};
+    $scope.headerSetting = {};
     $scope.goSearch = function(){
         $UrlUtils.go("/search.html", $scope.searchParams);
     };
@@ -88,4 +89,9 @@ var app = angular.module('dmsApp', [
     if(params && params.keyword){
         $scope.searchParams.keyword = params.keyword;
     };
+    if(params && params.label){
+        $scope.headerSetting.label = params.label;
+    }else{
+        $scope.headerSetting.label = '';
+    }
 }]);
