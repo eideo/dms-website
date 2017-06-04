@@ -2,7 +2,7 @@
  * Created by tanxinzheng on 17/5/14.
  */
 var config = {
-    apiKey:'development',
+    apiKey:'production',
     development:{
         apiHost:"http://localhost:8700"
     },

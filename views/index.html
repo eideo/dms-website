@@ -5,7 +5,7 @@
   <div class="menu style-1">
     <ul class="menu">
       <li ng-repeat="item in categorys">
-        <a href="/search.html">
+        <a href="/search.html?categoryId={{item.id}}">
           <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
           <div class="mega-menu full-width">
             <div class="col-12">
