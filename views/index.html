@@ -9,11 +9,9 @@
           <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
           <div class="mega-menu full-width">
             <div class="col-12">
-              <h4>
-                <span ng-bind="item.name"></span>
-              </h4>
+              <h4><a ng-bind="item.name"></a></h4>
               <ol>
-                <li ng-repeat="node in item.nodes"><p ng-bind="node.name"></p></li>
+                <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
               </ol>
             </div>
           </div>
