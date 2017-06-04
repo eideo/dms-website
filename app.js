@@ -58,7 +58,7 @@ app.use('/', index);
 app.all('/member/**', isLogin);
 app.use('/member', users);
 
-var proxyHost = "www.1g3h.com";
+var proxyHost = "system.1g3h.com";
 //var proxyHost = "localhost:8700";
 //var proxyHost = appConfig[env]['apiHost'];
 console.log("代理服务器API地址：" + proxyHost);

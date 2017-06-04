@@ -21,13 +21,13 @@ app.controller('indexCtrl', ['$scope', 'ProductAPI', 'CategoryAPI', 'CartAPI', '
         })
     };
     var img = {
-        1:'/img/icon_sg.png',
-        2:'/img/icon_ly.png',
-        3:'/img/icon_rs.png',
-        4:'/img/icon_sx.png',
-        5:'/img/icon_lh.png',
-        6:'/img/icon_ls.png',
-        7:'/img/icon_yp.png'
+        1:'/img/sc.png',
+        2:'/img/ly.png',
+        3:'/img/qdr.png',
+        4:'/img/gggc.png',
+        5:'/img/lh.png',
+        6:'/img/lpkq.png',
+        7:'/img/yhnr.png'
     };
     $scope.getImgSrc = function(id){
         return img[id];

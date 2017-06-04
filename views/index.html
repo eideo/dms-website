@@ -5,19 +5,19 @@
   <div class="menu style-1">
     <ul class="menu">
       <li ng-repeat="item in categorys">
-        <a href="#">
+        <a href="/search.html">
           <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
-        </a>
-        <div class="mega-menu full-width">
-          <div class="col-12">
-            <h4>
-              <a href="/search.html" ng-bind="item.name"></a>
-            </h4>
-            <ol>
-              <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
-            </ol>
+          <div class="mega-menu full-width">
+            <div class="col-12">
+              <h4>
+                <span ng-bind="item.name"></span>
+              </h4>
+              <ol>
+                <li ng-repeat="node in item.nodes"><p ng-bind="node.name"></p></li>
+              </ol>
+            </div>
           </div>
-        </div>
+        </a>
       </li>
     </ul>
   </div>
@@ -55,22 +55,22 @@
 <div class="am-g am-g-fixed smallnav">
   <div class="am-u-sm-3">
     <a href="/sort.html"><img src="/images/navsmall.jpg" />
-      <div class="title">商品分类</div>
+      <div class="title">首页</div>
     </a>
   </div>
   <div class="am-u-sm-3">
     <a href="#"><img src="/images/huismall.jpg" />
-      <div class="title">大聚惠</div>
+      <div class="title">产品分类</div>
     </a>
   </div>
   <div class="am-u-sm-3">
     <a href="#"><img src="/images/mansmall.jpg" />
-      <div class="title">个人中心</div>
+      <div class="title">购物车</div>
     </a>
   </div>
   <div class="am-u-sm-3">
     <a href="#"><img src="/images/moneysmall.jpg" />
-      <div class="title">投资理财</div>
+      <div class="title">个人中心</div>
     </a>
   </div>
 </div>
@@ -102,7 +102,7 @@
     </div>
     <div class="clear "></div>
     <div class="f1">
-
+      <div>
       <!--抢购-->
       <div class="am-container">
         <div class="shopTitle">
@@ -138,8 +138,10 @@
         </li>
         <div class="clear "></div>
       </div>
+      </div>
 
       <!--新品-->
+      <div>
       <div class="am-container">
         <div class="shopTitle">
           <h4 class="floor-title">新品</h4>
@@ -173,8 +175,9 @@
         </li>
         <div class="clear "></div>
       </div>
-
+      </div>
       <!--推荐-->
+      <div>
       <div class="am-container">
         <div class="shopTitle">
           <h4 class="floor-title">推荐</h4>
@@ -208,4 +211,8 @@
         </li>
         <div class="clear "></div>
       </div>
+      </div>
+    </div>
+  </div>
+</div>
 <% include  template/footer.html %>
