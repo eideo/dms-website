@@ -38,16 +38,6 @@
                                     <label for="phoneNumber"><i class="am-icon-mobile-phone am-icon-md"></i></label>
                                     <input type="text" required="true" ng-model="user.phoneNumber" data-msg-required="请输入手机号码" name="phoneNumber" id="phoneNumber" placeholder="请输入手机号码">
                                 </div>
-                                <div class="verification">
-                                    <label for="code"><i class="am-icon-code-fork"></i></label>
-                                    <input type="text" required="true" name="phoneIdentifyCode" ng-model="user.phoneIdentifyCode" data-msg-required="请输入验证码" id="code" placeholder="请输入验证码">
-                                    <a class="btn" ng-if="!tips.disabled" href="javascript:void(0);" ng-click="sendValidCode()">
-                                        <span ng-bind="tips.message"></span>
-                                    </a>
-                                    <a class="btn" ng-if="tips.disabled" href="javascript:void(0);">
-                                        <span ng-bind="tips.message"></span>
-                                    </a>
-                                </div>
                                 <div class="user-pass">
                                     <label for="phonePassword"><i class="am-icon-lock"></i></label>
                                     <input type="password" required="true" name="password" data-msg-required="请输入密码" ng-model="user.password" id="phonePassword" placeholder="设置密码">
@@ -55,6 +45,13 @@
                                 <div class="user-pass">
                                     <label for="phonePasswordrepeat"><i class="am-icon-lock"></i></label>
                                     <input type="password" data-rule-equalTo="#phonePassword" data-msg-equalTo="两次输入的密码不相同" data-msg-required="请输入密码" name="passwordrepeat" ng-model="user.passwordRepeat" id="phonePasswordrepeat" placeholder="确认密码">
+                                </div>
+                                <div class="verification">
+                                    <label for="code"><i class="am-icon-code-fork"></i></label>
+                                    <input type="text" required="true" name="phoneIdentifyCode" ng-model="user.phoneIdentifyCode" data-msg-required="请输入验证码" id="code" placeholder="请输入验证码">
+                                    <a class="btn" href="javascript:void(0);" ng-click="sendValidCode()">
+                                        <span ng-bind="tips.message"></span>
+                                    </a>
                                 </div>
                             </form>
                             <!--<div class="login-links">-->

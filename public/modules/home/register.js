@@ -10,6 +10,9 @@ app.controller('registerCtrl',
             disabled:false
         };
         $scope.sendValidCode = function(){
+            if($scope.tips.disabled){
+                return;
+            }
             if(!$scope.user.phoneNumber){
                 $dialog.alert("请输入手机号码");
                 return;
@@ -20,7 +23,7 @@ app.controller('registerCtrl',
                 var i = 60;
                 var instead = $interval(function(){
                     if(i <= 60 && i > 0){
-                        $scope.tips.message = i + "秒后重新获取";
+                        $scope.tips.message = i + "秒";
                         $scope.tips.disabled = true;
                     }else{
                         $interval.cancel(instead);
