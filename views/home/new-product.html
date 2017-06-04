@@ -1,98 +1,37 @@
-<% include  template/header.html %>
+<% include  ../template/header.html %>
 <script src="/modules/index.js"></script>
 <!--标题 -->
 <div class="container" ng-controller="indexCtrl">
     <div class="menu style-1">
         <ul class="menu">
             <li ng-repeat="item in categorys">
-                <a href="#">
+                <a href="/search.html">
                     <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
-                </a>
+
                 <div class="mega-menu full-width">
                     <div class="col-12">
                         <h4>
-                            <a href="/search.html" ng-bind="item.name"></a>
+                            <span ng-bind="item.name"></span>
                         </h4>
                         <ol>
                             <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
                         </ol>
                     </div>
                 </div>
+                </a>
             </li>
         </ul>
     </div>
 </div>
 
-<div class="bannerTwo">
-    <!--轮播 -->
-    <div class="am-slider am-slider-default scoll" data-am-flexslider id="demo-slider-0">
-        <ul class="am-slides">
-            <li class="banner1"><a href="/introduction.html"><img src="/images/ad5.jpg" /></a></li>
-            <li class="banner2"><a><img src="/images/ad6.jpg" /></a></li>
-            <li class="banner3"><a><img src="/images/ad7.jpg" /></a></li>
-        </ul>
-    </div>
-    <div class="clear"></div>
-</div>
-<!--导航 -->
-<script type="text/javascript">
-    (function() {
-        $('.am-slider').flexslider();
-    });
-    $(document).ready(function() {
-        $("li").hover(function() {
-            $(".category-content .category-list li.first .menu-in").css("display", "none");
-            $(".category-content .category-list li.first").removeClass("hover");
-            $(this).addClass("hover");
-            $(this).children("div.menu-in").css("display", "block")
-        }, function() {
-            $(this).removeClass("hover")
-            $(this).children("div.menu-in").css("display", "none")
-        });
-    })
-</script>
 <!--小导航 -->
-<div class="am-g am-g-fixed smallnav">
-    <div class="am-u-sm-3">
-        <a href="/sort.html"><img src="/images/navsmall.jpg" />
-            <div class="title">商品分类</div>
-        </a>
-    </div>
-    <div class="am-u-sm-3">
-        <a href="#"><img src="/images/huismall.jpg" />
-            <div class="title">大聚惠</div>
-        </a>
-    </div>
-    <div class="am-u-sm-3">
-        <a href="#"><img src="/images/mansmall.jpg" />
-            <div class="title">个人中心</div>
-        </a>
-    </div>
-    <div class="am-u-sm-3">
-        <a href="#"><img src="/images/moneysmall.jpg" />
-            <div class="title">投资理财</div>
-        </a>
-    </div>
-</div>
+
 <div class="clear"></div>
-<script type="text/javascript">
-    if ($(window).width() < 640) {
-        function autoScroll(obj) {
-            $(obj).find("ul").animate({
-                marginTop: "-39px"
-            }, 500, function() {
-                $(this).css({
-                    marginTop: "0px"
-                }).find("li:first").appendTo(this);
-            })
-        }
-        $(function() {
-            setInterval('autoScroll(".demo")', 3000);
-        })
-    }
-</script>
-
-
+<ol class="am-breadcrumb am-breadcrumb-slash">
+    <li><a href="/">首页</a></li>
+    <li><a href="/search.html">分类</a></li>
+    <li class="am-active">新品尝鲜</li>
+</ol>
 <div class="shopMainbg" ng-controller="indexCtrl">
     <div class="shopMain" id="shopmain">
 
@@ -102,54 +41,20 @@
         </div>
         <div class="clear "></div>
         <div class="f1">
-
-            <!--抢购-->
-            <div class="am-container">
-                <div class="shopTitle">
-                    <h4 class="floor-title">抢购</h4>
-                    <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都可以买到优质便宜的商品</h3></div>
-                </div>
-            </div>
-
-            <div class="am-g am-g-fixe` 2d floodSix pd10">
-                <li ng-repeat="item in qiangGouProducts" class="price_box">
-                    <a href="">
-                        <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
-                        <div>
-                            <div class="name">
-                                <b class="title" ng-bind="item.itemName"></b>
-                            </div>
-                            <p class="price">
-                                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-                                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-                            </p>
-                            <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
-                            </p>
-                            <div class="goumai">
-                                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-                                <button type="button" class="goods_ipt-add">立即购买</button>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <div class="clear "></div>
-            </div>
-
             <!--新品-->
-            <div class="am-container">
-                <div class="shopTitle">
-                    <h4 class="floor-title">新品</h4>
-                    <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都有新鲜美味的有机蔬菜</h3></div>
+            <div>
+                <div class="am-container">
+                    <div class="shopTitle">
+                        <h4 class="floor-title">新品</h4>
+                        <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都有新鲜美味的有机蔬菜</h3></div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="am-g am-g-fixe` 2d floodSix pd10">
-                <li ng-repeat="item in xinPinProducts" class="price_box">
-                    <a href="/introduction.html">
-                        <img ng-src="{{item.picUrl}}" style="width:100%"/>
+                <div class="am-g am-g-fixe` 2d floodSix pd10">
+                    <li ng-repeat="item in xinPinProducts" class="price_box">
+                        <a href="/introduction.html?productId={{item.id}}">
+                            <img ng-src="{{item.picUrl}}" style="width:100%"/>
+                        </a>
                         <div>
                             <div class="name">
                                 <b class="title" ng-bind="item.itemName"></b>
@@ -159,56 +64,20 @@
                                 <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
                             </p>
                             <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
+              <span class="number fr">
+                销量:<span ng-bind="item.sellNum"></span>
+              </span>
                             </p>
-                            <div class="goumai">
-                                <button type="button" class="goods_ipt-add">立即购买</button>
-                                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-                            </div>
                         </div>
-                    </a>
-                </li>
-                <div class="clear "></div>
-            </div>
-
-            <!--推荐-->
-            <div class="am-container">
-                <div class="shopTitle">
-                    <h4 class="floor-title">推荐</h4>
-                    <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都可以买到优质便宜的商品</h3></div>
+                        <div class="goumai">
+                            <button type="button" class="goods_ipt-add"  ng-click="buy(item)">立即购买</button>
+                            <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                        </div>
+                    </li>
+                    <div class="clear "></div>
                 </div>
             </div>
-
-            <div class="am-g am-g-fixe` 2d floodSix pd10">
-                <li ng-repeat="item in tuiJianProducts" class="price_box">
-                    <a href="/introduction.html">
-                        <img ng-src="{{item.picUrl}}" style="width:100%" ui-sref="product_detail({id:item.id})"/>
-                        <div>
-                            <div class="name">
-                                <b class="title" ng-bind="item.itemName"></b>
-                            </div>
-                            <p class="price">
-                                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
-                                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
-                            </p>
-                            <p class="wrap-left">
-                <span class="number fr">
-                  销量<span ng-bind="item.sellNum"></span>
-                </span>
-                            </p>
-                            <div class="goumai">
-                                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
-                                <button type="button" class="goods_ipt-add">立即购买</button>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <div class="clear "></div>
-            </div>
-
         </div>
-
     </div>
-    <% include  template/footer.html %>
+</div>
+<% include  ../template/footer.html %>

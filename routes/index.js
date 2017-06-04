@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '益禾农人' });
+  res.render('index', { title: '首页／益禾农人' });
 });
 
 router.get('/login', function(req, res, next) {
@@ -13,7 +13,7 @@ router.get('/login', function(req, res, next) {
     res.redirect('/member/information.html');
     return;
   }
-  res.render('home/login', { title: '登录', error:'' });
+  res.render('home/login', { title: '首页／登录', error:'' });
 }).post('/login', function(req, res) {
   sign.login(req, function(resp){
     var data;
@@ -36,13 +36,13 @@ router.get('/login', function(req, res, next) {
         }
       }
       res.render('home/login', {
-        title: '登录',
+        title: '首页／登录',
         error: data.message
       });
     }
   }, function(e){
     res.render('home/login', {
-      title: '登录',
+      title: '首页／登录',
       error:"账号或密码错误"
     });
   });
@@ -53,19 +53,28 @@ router.get('/logout', function(req, res) {
   res.redirect('/login', { title: '登录' });
 });
 router.get('/register', function(req, res, next) {
-  res.render('home/register', { title: '注册' });
+  res.render('home/register', { title: '首页／注册' });
 });
 router.get('/introduction.html', function(req, res, next) {
-  res.render('home/introduction', { title: '商品信息' });
+  res.render('home/introduction', { title: '首页／商品信息' });
 });
 router.get('/search.html', function(req, res, next) {
-  res.render('home/search', { title: '搜索' });
+  res.render('home/search', { title: '首页／搜索' });
 });
 router.get('/success.html', function(req, res, next) {
   res.render('home/success', { title: '个人中心' });
 });
 router.get('/sort.html', function(req, res, next) {
   res.render('home/sort', { title: '收藏' });
+});
+router.get('/referral.html', function(req, res, next) {
+  res.render('home/referral', { title: '热门推荐' });
+});
+router.get('/new-product.html', function(req, res, next) {
+  res.render('home/new-product', { title: '新品尝鲜' });
+});
+router.get('/purchase.html', function(req, res, next) {
+  res.render('home/purchase', { title: '热门抢购' });
 });
 
 

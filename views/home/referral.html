@@ -1,10 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<% include  ../template/header.html %>
+<script src="/modules/index.js"></script>
+<!--标题 -->
+<div class="container" ng-controller="indexCtrl">
+    <div class="menu style-1">
+        <ul class="menu">
+            <li ng-repeat="item in categorys">
+                <a href="/search.html">
+                    <img ng-src="{{getImgSrc(item.id)}}" style="width: 45px"/>{{item.name}}
 
-</body>
-</html>
+                <div class="mega-menu full-width">
+                    <div class="col-12">
+                        <h4>
+                            <span ng-bind="item.name"></span>
+                        </h4>
+                        <ol>
+                            <li ng-repeat="node in item.nodes"><a href="/search.html" ng-bind="node.name"></a></li>
+                        </ol>
+                    </div>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<ol class="am-breadcrumb am-breadcrumb-slash">
+    <li><a href="/">首页</a></li>
+    <li><a href="/search.html">分类</a></li>
+    <li class="am-active">热门推荐</li>
+</ol>
+<div class="shopMainbg" ng-controller="indexCtrl">
+    <div class="shopMain" id="shopmain">
+
+        <!--热门活动 -->
+
+        <div class="am-container">
+        </div>
+        <div class="clear "></div>
+        <div class="f1">
+            <!--推荐-->
+            <div>
+                <div class="am-container">
+                    <div class="shopTitle">
+                        <h4 class="floor-title">推荐</h4>
+                        <div class="floor-subtitle"><em class="am-icon-caret-left"></em><h3>每天都可以买到优质便宜的商品</h3></div>
+                    </div>
+                </div>
+
+                <div class="am-g am-g-fixe` 2d floodSix pd10">
+                    <li ng-repeat="item in tuiJianProducts" class="price_box">
+                        <a href="/introduction.html?productId={{item.id}}">
+                            <img ng-src="{{item.picUrl}}" style="width:100%"/>
+                        </a>
+                        <div>
+                            <div class="name">
+                                <b class="title" ng-bind="item.itemName"></b>
+                            </div>
+                            <p class="price">
+                                <strong ng-bind="item.sellPrice | currency:'￥'"></strong>
+                                <span class="trade-vip" ng-if="item.memberPrice">VIP <i ng-bind="item.memberPrice | currency:'￥'"></i></span>
+                            </p>
+                            <p class="wrap-left">
+              <span class="number fr">
+                销量:<span ng-bind="item.sellNum"></span>
+              </span>
+                            </p>
+                            <div class="goumai">
+                                <button type="button" class="shopping-button fr" ng-click="pushCarts(item)">加入购物车</button>
+                                <button type="button" class="goods_ipt-add" ng-click="buy(item)">立即购买</button>
+                            </div>
+                        </div>
+                    </li>
+                    <div class="clear "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<% include  ../template/footer.html %>
